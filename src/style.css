@@ -26,6 +26,12 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Man
 .section-rule { border-top: 1px solid var(--line); }
 
 .reveal-up { animation: reveal-up .8s cubic-bezier(.2,.8,.2,1) both; }
+.reveal-on-scroll { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2,.8,.2,1), transform .8s cubic-bezier(.2,.8,.2,1); }
+.reveal-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
+.brand-tile { transition: transform .35s cubic-bezier(.2,.8,.2,1), background-color .35s ease, color .35s ease; }
+.brand-tile:hover { transform: translateY(-6px) rotate(-1deg); }
+.cta-magnetic { transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease; }
+.cta-magnetic:hover { transform: translateY(-5px) scale(1.015); box-shadow: 8px 8px 0 #121212; }
 .reveal-delay-1 { animation-delay: .12s; }
 .reveal-delay-2 { animation-delay: .24s; }
 .reveal-delay-3 { animation-delay: .36s; }
