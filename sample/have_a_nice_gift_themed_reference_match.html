@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Have a Nice Gift | Thoughtful Gifting, Simplified</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Playfair Display for Serif, Plus Jakarta Sans for UI -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                brand: {
+                  primary: '#f04a5e', // Vibrant red from reference
+                  secondary: '#fff1f2', // Soft cream/off-white background
+                  dark: '#1a1a1a',
+                  light: '#ffffff'
+                }
+              },
+              fontFamily: {
+                sans: ['Plus Jakarta Sans', 'sans-serif'],
+                serif: ['Playfair Display', 'serif'],
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #e32d40 0%, #f43f5e 100%);
+        }
+        .text-shadow-sm {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .pill-card {
+            transition: all 0.3s ease;
+        }
+        .pill-card:hover {
+            transform: translateY(-5px);
+        }
+        .category-pill-gradient {
+            background: linear-gradient(to right, #f43f5e, #fb7185);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .custom-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-brand-secondary font-sans text-brand-dark">
+<!-- BEGIN: MainHeader -->
+<header class="hero-gradient text-white">
+<nav class="container mx-auto px-6 py-8 flex items-center justify-between">
+<!-- Brand Identity -->
+<div class="flex items-center gap-2">
+<span class="text-3xl font-black tracking-tight">Have a Nice Gift.</span>
+</div>
+<!-- Navigation Links -->
+<ul class="hidden lg:flex items-center gap-10 font-bold text-sm">
+<li><a class="border-b-2 border-white pb-1" href="#">Home</a></li>
+<li><a class="hover:opacity-80 transition-opacity" href="#">Collections</a></li>
+<li><a class="hover:opacity-80 transition-opacity" href="#">Custom Gifting</a></li>
+<li><a class="hover:opacity-80 transition-opacity" href="#">About</a></li>
+</ul>
+<!-- User Actions -->
+<div class="flex items-center gap-6">
+<button aria-label="Search" class="hover:scale-110 transition-transform">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+</button>
+<button aria-label="Cart" class="relative hover:scale-110 transition-transform">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="absolute -top-2 -right-2 bg-white text-brand-primary text-[10px] font-black w-5 h-5 flex items-center justify-center rounded-full shadow-sm">3</span>
+</button>
+</div>
+</nav>
+<!-- BEGIN: HeroSection -->
+<div class="container mx-auto px-6 pt-12 pb-32 flex flex-col lg:flex-row items-center relative overflow-visible">
+<!-- Hero Content -->
+<div class="w-full lg:w-1/2 mb-16 lg:mb-0 z-10">
+<h1 class="text-6xl lg:text-8xl font-serif font-bold leading-[1.1] mb-8 tracking-tight">
+                Thoughtful<br/>Gifting.
+            </h1>
+<p class="text-lg lg:text-xl opacity-90 mb-10 max-w-md font-medium leading-relaxed">
+                Expertly curated gift boxes for every occasion. Made from the heart, delivered with joy.
+            </p>
+<div class="flex flex-wrap gap-4 items-center">
+<button class="bg-white text-brand-primary px-10 py-4 rounded-full font-extrabold text-sm flex items-center gap-2 hover:bg-opacity-90 transition-all shadow-lg">
+                    Shop Now
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+</button>
+<button class="bg-transparent border-2 border-white/40 px-10 py-4 rounded-full font-extrabold text-sm text-white flex items-center gap-2 hover:bg-white/10 transition-all">
+                    All Collections
+                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+</button>
+</div>
+<!-- Happy Customer Badge -->
+<div class="mt-16 bg-white/95 backdrop-blur-md p-3 pr-8 rounded-full inline-flex items-center gap-4 shadow-xl">
+<div class="flex -space-x-3">
+<img alt="User 1" class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc3ETTBP-AwKJ75v00bWefxDX35M5aFaTkcdStgX9tFYsceyYzRVdQ2-usYErCo4NUJqAjgnNK8CGCBZj1TBwbfU_mFFVz2JHA1fQYyrHYPSSkXxqJ5lgWT2v4dZWtsXjsGZmG1dqSh-_g-iIbthY0iIJ2uVIdeOB8X1iCPaqF0xadGwBF6chdHRCqOGE8n1fWnT2DkFD_YEsZiwXXTS--3XfH6Rm1D0fnY4s1r7lF-Ss0zkZ-qRhrJQ"/>
+<img alt="User 2" class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbWCAcEpDfSOwvsAHAzxhuc3UZETHKgK22LLlP-PwoGDYyRPA8XipYiBmCnksjLjv5_zA4eJfiKaCbSmurSfqIdm-ad1udnoVlM-askZz5GnMbPN0EaRd4edHifxBtPAgTDMl9WMj-LYGs45LPHSMgntpDqSKW5NUPYC20YszmTQdTt26src1HswxZ72qOy57QdASUxkSmwsFBfmaHdngDqEw495REL5PGp6KCsrEdW1xCJtVOBxoRHw"/>
+<img alt="User 3" class="w-10 h-10 rounded-full border-2 border-white object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsFyRWBM0w6SNCOIdiPf5CFdgLTAnpgdjT1iL77SLvBcBKPBqafuxzv7KGpln_YSTP5cOY3485IPxU1g-z8YUGn9ZVDS3PIqxJrZkT-haS-15_5Wsb45ZtsoKGrpZeVSOdUNjS3e-9HUQ1w-Td35zsszLRN-iSFXS4VgiKHmigtUKbTHUSIdKOJc5g69bnUM_T3bXfdiqbxDbafnPBBqWNn1Q6rX42MmIDXG_0uhzu5oVclUy1eN-6kw"/>
+</div>
+<div>
+<p class="text-[11px] font-bold text-brand-dark opacity-60 uppercase tracking-wider mb-0.5 leading-none">Our Happy Customer</p>
+<div class="flex items-center gap-1.5">
+<div class="flex text-yellow-400 text-xs">★★★★★</div>
+<span class="text-brand-dark font-black text-sm">4.5</span>
+<span class="text-brand-dark opacity-40 text-[10px] font-bold ml-1">(453k Reviews)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Hero Visual (Circular Motif from Reference) -->
+<div class="w-full lg:w-1/2 flex justify-center lg:justify-end relative">
+<div class="relative w-80 h-80 lg:w-[600px] lg:h-[600px] bg-white/10 rounded-full flex items-center justify-center overflow-hidden">
+<img alt="Hero Gift Image" class="w-full h-full object-cover scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1LkoST4K5ME-PzE8R1Ugm0pBlWTR23IywBCOxiMghz0T1H9Z_1-2Zuty7vvX2oPFZu6MPJY2bz8yLMetWJYrmPWr5IzztntiF8PHNSKpxTrT92e1uS_sU32TtqZ7pLx0TDu_EwBTctgQVHeIhvwrWvlt1-AQhXZr5B62uKBgZ-cSbHgR1CTheJZttR2Tn1asXzK4wwvyYVZlBhZhaMyHfdagZnTno3QYexRt_TfxZ0JkW_gfkQFwReA"/>
+</div>
+</div>
+</div>
+</header>
+<!-- END: HeroSection -->
+<!-- BEGIN: Categories (Pill Style from Reference) -->
+<section class="py-12 -mt-10 relative z-20">
+<div class="container mx-auto px-6">
+<div class="flex gap-4 overflow-x-auto whitespace-nowrap custom-scrollbar pb-4">
+<!-- Category Pill 1 -->
+<div class="pill-card category-pill-gradient flex items-center bg-white rounded-full p-2 pr-6 shadow-lg border border-white/20 cursor-pointer flex-shrink-0 min-w-[240px]">
+<img alt="Corporate" class="w-14 h-14 rounded-full object-cover border-2 border-white/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXqB73T90TQvDAb7ggswefxpyRigmxPqTxmmtVq0TVpOz0mYFS_Whi03QCLp0HiSxAiA9-7G3bWzbLqrtCEbVWMHNIRjbObe-pOdM4Z2jpFD_UxjblHO7s-DnMkO2kCiDYSfOjRtZnjt3SYy8kp9nMD6KUfzboj_ukS-PeqzF2KJdD-caeIuhwn3e2zA6wVq4dPBXyW7PZ-v6QspMp4-sxoUiYMbfo-EAtf8FWALzsA51NZtpjBYclyQ"/>
+<div class="ml-4 flex items-center justify-between flex-grow text-white">
+<span class="font-bold text-sm tracking-tight leading-tight">Corporate<br/>Gallery</span>
+<svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg>
+</div>
+</div>
+<!-- Category Pill 2 -->
+<div class="pill-card category-pill-gradient flex items-center bg-white rounded-full p-2 pr-6 shadow-lg border border-white/20 cursor-pointer flex-shrink-0 min-w-[240px]">
+<img alt="Wedding" class="w-14 h-14 rounded-full object-cover border-2 border-white/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK1y9tFWsnRox8nCit6W_nky8f70EOwpRixzqti0MKLPyvqiei2_nd3BWX056FAdNPHPIydCkFU0K0-b1Bfz-5YBhWP-ve2RDaMZsJDbQOGbBS7Za4fEH6eCwJi1LTDr07bOp59TzY10u8zbkE37XDt0b9piUUDk-89kS-hC3UPsIxhLppTx0jNKwS2D8e07CX-S_L--dbrnV5GqO8IC9WWrRpWJE02DpaKLtPGiDRiaW92JnLRdbxVg"/>
+<div class="ml-4 flex items-center justify-between flex-grow text-white">
+<span class="font-bold text-sm tracking-tight leading-tight">Wedding<br/>Collection</span>
+<svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg>
+</div>
+</div>
+<!-- Category Pill 3 -->
+<div class="pill-card category-pill-gradient flex items-center bg-white rounded-full p-2 pr-6 shadow-lg border border-white/20 cursor-pointer flex-shrink-0 min-w-[240px]">
+<img alt="Birthday" class="w-14 h-14 rounded-full object-cover border-2 border-white/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2zTuaTsrzrwu67wYNV5iuWyJvHahuFoH5GxCC3_PONmkERY0u41w2-aTcYR9FpmZit3P6TODB_cKtAebmOK4V8P5Hj5aJvSaiq2UtPLk00svD1s5NBmpe4rxe6wGWzxHAvlBlRf5iK8uW3nCldzGctMQnhND6UV4fAWje43JvT0doGv2VjqN-xd-rYb2bKKvrfQvvQIe8qp8LlovjG88UuzdBMv6HlWPHIUhiJhgJ0o2FpO-QBfEaDQ"/>
+<div class="ml-4 flex items-center justify-between flex-grow text-white">
+<span class="font-bold text-sm tracking-tight leading-tight">Birthday<br/>Surprise</span>
+<svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg>
+</div>
+</div>
+<!-- Category Pill 4 -->
+<div class="pill-card category-pill-gradient flex items-center bg-white rounded-full p-2 pr-6 shadow-lg border border-white/20 cursor-pointer flex-shrink-0 min-w-[240px]">
+<img alt="Self-Care" class="w-14 h-14 rounded-full object-cover border-2 border-white/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXqB73T90TQvDAb7ggswefxpyRigmxPqTxmmtVq0TVpOz0mYFS_Whi03QCLp0HiSxAiA9-7G3bWzbLqrtCEbVWMHNIRjbObe-pOdM4Z2jpFD_UxjblHO7s-DnMkO2kCiDYSfOjRtZnjt3SYy8kp9nMD6KUfzboj_ukS-PeqzF2KJdD-caeIuhwn3e2zA6wVq4dPBXyW7PZ-v6QspMp4-sxoUiYMbfo-EAtf8FWALzsA51NZtpjBYclyQ"/>
+<div class="ml-4 flex items-center justify-between flex-grow text-white">
+<span class="font-bold text-sm tracking-tight leading-tight">Self-Care<br/>Essentials</span>
+<svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Icon Navigation (Matching Reference) -->
+<section class="py-12 bg-brand-secondary">
+<div class="container mx-auto px-6 flex justify-center flex-wrap gap-8 md:gap-12 text-center text-[10px] font-bold text-brand-dark uppercase tracking-[0.2em] opacity-80">
+<div class="flex flex-col items-center gap-3">
+<div class="w-16 h-16 bg-brand-primary/10 rounded-2xl flex items-center justify-center text-brand-primary transition-all hover:bg-brand-primary hover:text-white cursor-pointer shadow-sm">
+<svg class="h-7 w-7" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<span>All</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-brand-dark shadow-sm hover:text-brand-primary transition-colors cursor-pointer">
+<svg class="h-7 w-7" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<span>Boxes</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-brand-dark shadow-sm hover:text-brand-primary transition-colors cursor-pointer">
+<svg class="h-7 w-7" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<span>Sets</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-brand-dark shadow-sm hover:text-brand-primary transition-colors cursor-pointer">
+<svg class="h-7 w-7" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<span>Kits</span>
+</div>
+</div>
+</section>
+<!-- BEGIN: ProductGrid (Styling from Reference) -->
+<section class="py-16 bg-brand-secondary">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="group bg-white rounded-[2rem] p-4 border border-transparent hover:border-brand-primary/20 transition-all hover:shadow-xl relative">
+<div class="relative bg-[#F8F8F8] rounded-[1.5rem] mb-4 overflow-hidden aspect-[1/1.2] flex items-center justify-center">
+<img alt="The Grand Celebration Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXqB73T90TQvDAb7ggswefxpyRigmxPqTxmmtVq0TVpOz0mYFS_Whi03QCLp0HiSxAiA9-7G3bWzbLqrtCEbVWMHNIRjbObe-pOdM4Z2jpFD_UxjblHO7s-DnMkO2kCiDYSfOjRtZnjt3SYy8kp9nMD6KUfzboj_ukS-PeqzF2KJdD-caeIuhwn3e2zA6wVq4dPBXyW7PZ-v6QspMp4-sxoUiYMbfo-EAtf8FWALzsA51NZtpjBYclyQ"/>
+<div class="absolute top-3 left-3 flex flex-col gap-1.5">
+<span class="bg-[#f04a5e] text-white text-[9px] font-black px-2.5 py-1 rounded-full uppercase tracking-widest">Hot</span>
+<span class="bg-[#56c68e] text-white text-[9px] font-black px-2.5 py-1 rounded-full uppercase tracking-widest">New</span>
+</div>
+</div>
+<div class="px-2">
+<h3 class="font-bold text-sm text-brand-dark mb-1">The Grand Celebration Box</h3>
+<div class="flex justify-between items-center mt-2">
+<span class="text-brand-primary font-black text-lg">$125.00</span>
+<button class="text-brand-dark opacity-30 hover:opacity-100 hover:text-brand-primary transition-all">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<button class="w-full mt-4 bg-brand-primary text-white py-3 rounded-full font-black text-[10px] uppercase tracking-widest flex items-center justify-center gap-2 shadow-md hover:bg-brand-primary/90 transition-all">
+<svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+                        Add to Cart
+                    </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-white rounded-[2rem] p-4 border border-transparent hover:border-brand-primary/20 transition-all hover:shadow-xl relative">
+<div class="relative bg-[#F8F8F8] rounded-[1.5rem] mb-4 overflow-hidden aspect-[1/1.2] flex items-center justify-center">
+<img alt="Serenity Spa Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXqB73T90TQvDAb7ggswefxpyRigmxPqTxmmtVq0TVpOz0mYFS_Whi03QCLp0HiSxAiA9-7G3bWzbLqrtCEbVWMHNIRjbObe-pOdM4Z2jpFD_UxjblHO7s-DnMkO2kCiDYSfOjRtZnjt3SYy8kp9nMD6KUfzboj_ukS-PeqzF2KJdD-caeIuhwn3e2zA6wVq4dPBXyW7PZ-v6QspMp4-sxoUiYMbfo-EAtf8FWALzsA51NZtpjBYclyQ"/>
+</div>
+<div class="px-2">
+<h3 class="font-bold text-sm text-brand-dark mb-1">Serenity Spa Set</h3>
+<div class="flex justify-between items-center mt-2">
+<span class="text-brand-primary font-black text-lg">$85.00</span>
+<button class="text-brand-dark opacity-30 hover:opacity-100 hover:text-brand-primary transition-all">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<button class="w-full mt-4 bg-brand-primary text-white py-3 rounded-full font-black text-[10px] uppercase tracking-widest flex items-center justify-center gap-2 shadow-md hover:bg-brand-primary/90 transition-all">
+<svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+                        Add to Cart
+                    </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-white rounded-[2rem] p-4 border border-transparent hover:border-brand-primary/20 transition-all hover:shadow-xl relative">
+<div class="relative bg-[#F8F8F8] rounded-[1.5rem] mb-4 overflow-hidden aspect-[1/1.2] flex items-center justify-center">
+<img alt="Morning Glow Kit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXqB73T90TQvDAb7ggswefxpyRigmxPqTxmmtVq0TVpOz0mYFS_Whi03QCLp0HiSxAiA9-7G3bWzbLqrtCEbVWMHNIRjbObe-pOdM4Z2jpFD_UxjblHO7s-DnMkO2kCiDYSfOjRtZnjt3SYy8kp9nMD6KUfzboj_ukS-PeqzF2KJdD-caeIuhwn3e2zA6wVq4dPBXyW7PZ-v6QspMp4-sxoUiYMbfo-EAtf8FWALzsA51NZtpjBYclyQ"/>
+</div>
+<div class="px-2">
+<h3 class="font-bold text-sm text-brand-dark mb-1">Morning Glow Kit</h3>
+<div class="flex justify-between items-center mt-2">
+<span class="text-brand-primary font-black text-lg">$64.00</span>
+<button class="text-brand-dark opacity-30 hover:opacity-100 hover:text-brand-primary transition-all">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<button class="w-full mt-4 bg-brand-primary text-white py-3 rounded-full font-black text-[10px] uppercase tracking-widest flex items-center justify-center gap-2 shadow-md hover:bg-brand-primary/90 transition-all">
+<svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+                        Add to Cart
+                    </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-white rounded-[2rem] p-4 border border-transparent hover:border-brand-primary/20 transition-all hover:shadow-xl relative">
+<div class="relative bg-[#F8F8F8] rounded-[1.5rem] mb-4 overflow-hidden aspect-[1/1.2] flex items-center justify-center">
+<img alt="Midnight Snack Box" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2zTuaTsrzrwu67wYNV5iuWyJvHahuFoH5GxCC3_PONmkERY0u41w2-aTcYR9FpmZit3P6TODB_cKtAebmOK4V8P5Hj5aJvSaiq2UtPLk00svD1s5NBmpe4rxe6wGWzxHAvlBlRf5iK8uW3nCldzGctMQnhND6UV4fAWje43JvT0doGv2VjqN-xd-rYb2bKKvrfQvvQIe8qp8LlovjG88UuzdBMv6HlWPHIUhiJhgJ0o2FpO-QBfEaDQ"/>
+</div>
+<div class="px-2">
+<h3 class="font-bold text-sm text-brand-dark mb-1">Midnight Snack Box</h3>
+<div class="flex justify-between items-center mt-2">
+<span class="text-brand-primary font-black text-lg">$55.00</span>
+<button class="text-brand-dark opacity-30 hover:opacity-100 hover:text-brand-primary transition-all">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<button class="w-full mt-4 bg-brand-primary text-white py-3 rounded-full font-black text-[10px] uppercase tracking-widest flex items-center justify-center gap-2 shadow-md hover:bg-brand-primary/90 transition-all">
+<svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
+                        Add to Cart
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ProductGrid -->
+<!-- BEGIN: CTA / Inquiry Section -->
+<section class="py-24 bg-brand-secondary">
+<div class="container mx-auto px-6">
+<div class="bg-white rounded-[4rem] p-8 md:p-20 flex flex-col md:flex-row items-center gap-16 shadow-2xl relative overflow-hidden">
+<!-- Background Decoration -->
+<div class="absolute top-0 right-0 w-80 h-80 bg-brand-primary/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="w-full md:w-1/2 relative z-10">
+<div class="inline-block bg-brand-primary/10 text-brand-primary font-black px-5 py-2 rounded-full mb-8 uppercase tracking-[0.2em] text-[10px]">Custom Requests</div>
+<h2 class="text-5xl lg:text-7xl font-serif font-bold mb-8 leading-tight tracking-tight">Need a custom touch for your event?</h2>
+<p class="text-gray-500 text-lg mb-10 leading-relaxed font-medium">
+                    From corporate retreats to wedding favors, we create bespoke gifting experiences that leave a lasting impression.
+                </p>
+<button class="bg-brand-dark text-white px-12 py-5 rounded-full font-black text-xs uppercase tracking-widest hover:bg-brand-primary transition-all shadow-xl">
+                    Send an Inquiry
+                </button>
+</div>
+<div class="w-full md:w-1/2">
+<div class="grid grid-cols-2 gap-6 relative">
+<div class="space-y-6">
+<div class="rounded-[3rem] overflow-hidden shadow-lg h-80">
+<img alt="Corporate Gifting" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXqB73T90TQvDAb7ggswefxpyRigmxPqTxmmtVq0TVpOz0mYFS_Whi03QCLp0HiSxAiA9-7G3bWzbLqrtCEbVWMHNIRjbObe-pOdM4Z2jpFD_UxjblHO7s-DnMkO2kCiDYSfOjRtZnjt3SYy8kp9nMD6KUfzboj_ukS-PeqzF2KJdD-caeIuhwn3e2zA6wVq4dPBXyW7PZ-v6QspMp4-sxoUiYMbfo-EAtf8FWALzsA51NZtpjBYclyQ"/>
+</div>
+<div class="bg-brand-primary rounded-[3rem] p-6 text-white h-44 flex items-center justify-center text-center">
+<span class="font-serif font-black text-2xl italic leading-tight">100% Unique Design</span>
+</div>
+</div>
+<div class="pt-12 space-y-6">
+<div class="bg-brand-secondary rounded-[3rem] h-44 flex items-center justify-center text-brand-primary">
+<svg class="h-20 w-20" fill="currentColor" viewbox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"></path></svg>
+</div>
+<div class="rounded-[3rem] overflow-hidden shadow-lg h-80">
+<img alt="Wedding Gifting" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK1y9tFWsnRox8nCit6W_nky8f70EOwpRixzqti0MKLPyvqiei2_nd3BWX056FAdNPHPIydCkFU0K0-b1Bfz-5YBhWP-ve2RDaMZsJDbQOGbBS7Za4fEH6eCwJi1LTDr07bOp59TzY10u8zbkE37XDt0b9piUUDk-89kS-hC3UPsIxhLppTx0jNKwS2D8e07CX-S_L--dbrnV5GqO8IC9WWrRpWJE02DpaKLtPGiDRiaW92JnLRdbxVg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BEGIN: Footer -->
+<footer class="bg-white text-brand-dark pt-24 pb-12 border-t border-brand-secondary">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+<div class="space-y-8">
+<span class="text-3xl font-black tracking-tighter text-brand-primary">Have a Nice Gift.</span>
+<p class="text-gray-400 font-medium leading-relaxed max-w-xs">
+                    Spreading joy through curated, thoughtful gifting for everyone on your list. Premium quality, expertly styled.
+                </p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-brand-primary hover:text-white hover:border-brand-primary transition-all cursor-pointer">
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</div>
+</div>
+</div>
+<div>
+<h4 class="font-black text-xs uppercase tracking-widest mb-10 text-brand-dark">Quick Links</h4>
+<ul class="space-y-6 text-gray-400 font-bold text-sm">
+<li><a class="hover:text-brand-primary transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-brand-primary transition-colors" href="#">Shop All</a></li>
+<li><a class="hover:text-brand-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-brand-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-black text-xs uppercase tracking-widest mb-10 text-brand-dark">Legal</h4>
+<ul class="space-y-6 text-gray-400 font-bold text-sm">
+<li><a class="hover:text-brand-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-brand-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-brand-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-brand-primary transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div class="space-y-8">
+<h4 class="font-black text-xs uppercase tracking-widest text-brand-dark">Newsletter</h4>
+<p class="text-gray-400 font-bold text-sm">Get gifting tips and 10% off your first box.</p>
+<form class="flex flex-col gap-4">
+<input class="bg-brand-secondary border-none rounded-full px-6 py-4 text-sm font-bold focus:ring-2 focus:ring-brand-primary/20 placeholder:text-gray-300" placeholder="Email Address" type="email"/>
+<button class="bg-brand-primary text-white py-4 rounded-full font-black text-[10px] uppercase tracking-[0.2em] shadow-lg shadow-brand-primary/20 hover:scale-[1.02] transition-all">Subscribe Now</button>
+</form>
+</div>
+</div>
+<div class="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-gray-300 font-bold text-[10px] uppercase tracking-widest">© 2024 Have a Nice Gift. All rights reserved.</p>
+<div class="flex items-center gap-8">
+<img alt="PayPal" class="h-4 opacity-30 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDli_0FE9dYWmKF--TM9tFoxZ0Ir30ng4_5ErBoZnTcbp23vSXXJ7mRe-FxkF5tvTWGjj3XJeBW1CybUVNgxi2KsT0VlcqnjsOVrtB_8Hk884SmvusOYqZDschCQI8x4P5AbPHTW-Swj6hGN3_3e3QTW7obh_iBE1Px4YNXFbF31WofQtEsWgmakUQg9H-RJiyQtrjuCAlsCX_3U5RgNwFuSEivY8lUFqqi1aJe_2xZ8kJR6lTan5R2Kw"/>
+<img alt="Visa" class="h-4 opacity-30 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAB8X-W73y7D6AYv18OblgvYF7iVItiKA_zuW5WAiOV3pRmVoj0ZptKGsujpKHMQ-NtbNwruY9zhwEIxkdCbMPobWr_bUe_Jv-tFCZrWDB5ijNrqrDWyiIf5XurJI-uH95UZHaFNflvEFd-adaEKXc5aqktIo9y_5RnbgE5iZPOhjbXPQkfMyuoJ3a3pj4gF43FWpANdjeZyUkEA70_TWpRn2LdZciYbC8d-hgSiHJwZt7vnFeoZ7Keg"/>
+<img alt="Mastercard" class="h-6 opacity-30 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZjhMoWmKYJQ4vt5PQv-cWc0usy88IpEAKfknecO8TSla2WxtozZXecgf2SKLKy3FXJyWpb3u3-lnO8wCHVsqoXnkJw1yuzV-vYC6t4r87mDvOZwH2VLG8VgScxlyniq3uiLgzsJOtlJMHqO6MM_7fuKdgUYbsmpMre7ASridPUrMSZvUVRmop5aY8X21Je40hqBxnBjvKIzYJyZx16ADd_hT_uT5JbMhwBpiHsHum9NLuSkISrC-1Xg"/>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

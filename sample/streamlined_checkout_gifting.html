@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout - Have a Nice Gift</title>
+<script type="module" src="/src/main.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#773300",
+                        "tertiary-fixed": "#ffdf9e",
+                        "tertiary": "#795900",
+                        "surface-variant": "#e8e1dc",
+                        "outline": "#8b7265",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#d2e4ff",
+                        "on-secondary-fixed": "#001c38",
+                        "surface-container-highest": "#e8e1dc",
+                        "primary-fixed-dim": "#ffb68e",
+                        "surface": "#fff8f2",
+                        "surface-tint": "#9c4500",
+                        "surface-white": "#FFFFFF",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#ffb68e",
+                        "tertiary-container": "#c2930f",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#abc9f2",
+                        "on-secondary-fixed-variant": "#2b486b",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "teal-accent": "#2FB6A5",
+                        "ink-black": "#0D1B2B",
+                        "outline-variant": "#dfc0b1",
+                        "surface-container-low": "#f9f2ec",
+                        "on-surface": "#1e1b18",
+                        "inverse-on-surface": "#f6f0ea",
+                        "surface-container-high": "#eee7e1",
+                        "on-surface-variant": "#584237",
+                        "on-background": "#1e1b18",
+                        "on-tertiary-fixed": "#261a00",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#ffdbca",
+                        "surface-bright": "#fff8f2",
+                        "on-tertiary-fixed-variant": "#5b4300",
+                        "on-secondary-container": "#3f5b7f",
+                        "primary-container": "#f4761e",
+                        "primary": "#9c4500",
+                        "on-primary-container": "#562300",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#b6d4fe",
+                        "secondary": "#436084",
+                        "tertiary-fixed-dim": "#f4bf40",
+                        "inverse-surface": "#33302c",
+                        "background": "#fff8f2",
+                        "on-tertiary-container": "#422f00",
+                        "on-primary-fixed": "#331200",
+                        "surface-container": "#f3ede7",
+                        "surface-dim": "#dfd9d3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "base": "8px",
+                        "section-gap": "80px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-xl-mobile": ["Plus Jakarta Sans"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Nunito Sans"],
+                        "body-lg": ["Nunito Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-xl-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "800"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #fff8f2;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-shadow {
+            box-shadow: 0 4px 12px rgba(13, 27, 43, 0.05);
+        }
+        .pill-button {
+            transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        .pill-button:active {
+            transform: scale(0.96);
+        }
+        input:focus {
+            outline: none;
+            border-color: #9c4500 !important;
+            box-shadow: 0 0 0 4px rgba(156, 69, 0, 0.1);
+        }
+        .bento-card {
+            border-radius: 24px;
+            background: #ffffff;
+            padding: 32px;
+        }
+        /* Hide nav according to rules for focused checkout */
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- Top Navigation Anchor (Minimal for Checkout) -->
+<header class="fixed top-0 w-full z-50 bg-surface shadow-sm px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center max-w-7xl mx-auto">
+<a class="font-headline-lg text-headline-lg font-extrabold text-primary italic" href="/">Have a Nice Gift</a>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-bold text-label-bold">
+<span class="material-symbols-outlined">lock</span>
+<span class="hidden md:inline">Secure Checkout</span>
+</div>
+</header>
+<main class="pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Shipping & Gifting Details -->
+<div class="lg:col-span-7 space-y-6">
+<div class="bento-card custom-shadow">
+<h2 class="font-headline-md text-headline-md mb-6 text-ink-black flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+                        Shipping Information
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label-bold text-label-bold text-on-surface-variant">First Name</label>
+<input class="w-full bg-surface-container-low border-outline-variant rounded-xl p-3" placeholder="Jane" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-bold text-label-bold text-on-surface-variant">Last Name</label>
+<input class="w-full bg-surface-container-low border-outline-variant rounded-xl p-3" placeholder="Doe" type="text"/>
+</div>
+<div class="md:col-span-2 space-y-1">
+<label class="font-label-bold text-label-bold text-on-surface-variant">Shipping Address</label>
+<input class="w-full bg-surface-container-low border-outline-variant rounded-xl p-3" placeholder="123 Creator Lane, Suite 101" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-bold text-label-bold text-on-surface-variant">City</label>
+<input class="w-full bg-surface-container-low border-outline-variant rounded-xl p-3" placeholder="Los Angeles" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-bold text-label-bold text-on-surface-variant">Postal Code</label>
+<input class="w-full bg-surface-container-low border-outline-variant rounded-xl p-3" placeholder="90001" type="text"/>
+</div>
+</div>
+</div>
+<!-- Gifting Toggle Section -->
+<div class="bento-card custom-shadow border-2 border-primary/10">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">featured_seasonal_and_gifts</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md leading-none">Send as Gift?</h3>
+<p class="text-body-md text-on-surface-variant mt-1">Add a custom note and schedule delivery.</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" id="gift-toggle" type="checkbox"/>
+<div class="w-14 h-8 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:start-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="hidden space-y-4 pt-4 border-t border-outline-variant" id="gift-fields">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label-bold text-label-bold text-on-surface-variant">Recipient Name</label>
+<input class="w-full bg-surface-container-low border-outline-variant rounded-xl p-3" placeholder="Who is this for?" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-bold text-label-bold text-on-surface-variant">Scheduled Delivery Date</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-outline-variant rounded-xl p-3 pl-10" type="date"/>
+<span class="material-symbols-outlined absolute left-3 top-3 text-on-surface-variant">calendar_today</span>
+</div>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-bold text-label-bold text-on-surface-variant">Gift Message</label>
+<textarea class="w-full bg-surface-container-low border-outline-variant rounded-xl p-3" placeholder="Write a sweet note..." rows="3"></textarea>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Order Summary & Payment -->
+<div class="lg:col-span-5 space-y-6">
+<div class="bento-card custom-shadow bg-surface-container-low">
+<h2 class="font-headline-md text-headline-md mb-6 text-ink-black">Order Summary</h2>
+<div class="flex gap-4 items-center mb-6">
+<div class="w-20 h-20 rounded-xl bg-cover bg-center flex-shrink-0" data-alt="A luxurious, vibrant red and gold gift box called The Grand Celebration Box, filled with premium lifestyle items, gourmet treats, and a handwritten card. The lighting is high-end product photography style, warm and inviting, showcasing high contrast and rich textures against a soft cream background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDPXXyJ1PDh1ZThzk4RKMEUZKRaVpSzZ87GTGh84_g8c-wnf1K1X195cA-FZKpkPbjZp2eBF5EGjswotkOiyYiyQak3JNzzbItPumQEXgZfyVK0J_6uP9HqybTrxUBDt9WECcFMaZOQQKiWvvLrcVtxe8UvSuDcJV7MJien8-DuGa51XKSYdTnyV3V_KlFH4sj869hQGOJeMP5JZMvXcOXRBOQxLiypFDSdUzjKpipxcfle3K8RcrmF2Q')"></div>
+<div class="flex-1">
+<p class="font-label-bold text-label-bold">The Grand Celebration Box</p>
+<p class="text-body-md text-on-surface-variant">Special Edition • Qty: 1</p>
+<p class="font-bold text-primary mt-1">$89.00</p>
+</div>
+</div>
+<div class="space-y-3 border-t border-outline-variant pt-6 text-body-md">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Subtotal</span>
+<span>$89.00</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Shipping</span>
+<span class="text-teal-accent font-bold">FREE</span>
+</div>
+<div class="flex justify-between font-headline-md text-headline-md pt-3 border-t border-dashed border-outline-variant">
+<span>Total</span>
+<span class="text-ink-black">$89.00</span>
+</div>
+</div>
+</div>
+<div class="bento-card custom-shadow">
+<h2 class="font-headline-md text-headline-md mb-6 text-ink-black">Secure Payment</h2>
+<div class="flex gap-2 mb-6">
+<button class="flex-1 py-3 px-2 border-2 border-primary rounded-xl flex items-center justify-center gap-2 bg-primary/5">
+<span class="material-symbols-outlined text-primary">credit_card</span>
+<span class="font-label-bold text-primary">Card</span>
+</button>
+<button class="flex-1 py-3 px-2 border-2 border-outline-variant rounded-xl flex items-center justify-center gap-2 hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">account_balance_wallet</span>
+<span class="font-label-bold text-on-surface-variant">UPI</span>
+</button>
+</div>
+<div class="space-y-4">
+<div class="space-y-1">
+<label class="font-label-bold text-label-bold text-on-surface-variant">Card Number</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-outline-variant rounded-xl p-3 pr-12" placeholder="0000 0000 0000 0000" type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-on-surface-variant">contactless</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label-bold text-label-bold text-on-surface-variant">Expiry Date</label>
+<input class="w-full bg-surface-container-low border-outline-variant rounded-xl p-3" placeholder="MM/YY" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-bold text-label-bold text-on-surface-variant">CVV</label>
+<input class="w-full bg-surface-container-low border-outline-variant rounded-xl p-3" placeholder="***" type="password"/>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary font-headline-md text-headline-md py-4 rounded-full mt-6 pill-button shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+                            Pay $89.00
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<p class="text-center text-body-md text-on-surface-variant mt-4 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+                        Encrypted &amp; PCI-DSS Compliant
+                    </p>
+</div>
+</div>
+</div>
+<!-- Referral Banner -->
+<div class="mt-section-gap w-full bg-secondary-container rounded-[32px] p-8 md:p-12 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 custom-shadow">
+<div class="relative z-10 text-center md:text-left">
+<h3 class="font-headline-xl text-headline-xl text-on-secondary-container leading-tight mb-4">Give $10, Get $10</h3>
+<p class="text-body-lg text-on-secondary-container max-w-md">Spread the joy of gifting! Refer a friend and you'll both get $10 off your next celebration box.</p>
+<div class="mt-8 flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-bold text-label-bold pill-button">Share Link</button>
+<button class="border-2 border-on-secondary-container text-on-secondary-container px-8 py-3 rounded-full font-label-bold text-label-bold hover:bg-on-secondary-container hover:text-white transition-colors">How it works</button>
+</div>
+</div>
+<!-- Graphic Element representing referral -->
+<div class="hidden md:block absolute right-[-50px] top-[-20px] opacity-20">
+<span class="material-symbols-outlined text-[300px] text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+</div>
+<div class="relative z-10 flex -space-x-4">
+<div class="w-16 h-16 rounded-full border-4 border-secondary-container bg-cover bg-center rotate-[-3deg]" data-alt="Portrait of a smiling young traveler with sunglasses, vibrant lifestyle aesthetic, soft high-key lighting, cream background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB6n2Ihyy_NcTZEVk5nUMjBFdByGWeyGAWdBPiY5qjtZaX_uX_EJv9OUvEG-JRgjyoRTNJXt5yjb90KwVke9Kz5JFkdsAq9ZoCuCDNcth2oe_s9_ncLf5ymtvMWr3LNf804o1uY-M5_R4kKMPOaj1xBcr1KH-p69pIvMYDspj5EagliUKwqGMIiZ6yzPT3iRiYcTj3de7R0XFXJlPckCD-813PND9mmlmgQprkQPx7NMxEc850DZEm0Ag')"></div>
+<div class="w-16 h-16 rounded-full border-4 border-secondary-container bg-cover bg-center rotate-[2deg]" data-alt="Close up of a laughing woman wearing a stylish hat, cheerful creator vibe, high saturation colors, warm studio lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD1NIqwBeay_p8k8UmKy8EZLm_N9toV7eaUp74u0VMPEuK2GVxq6ttTsjq9UC_cHUDqcA467KJ667gZ6oAi9rM5b0P9qofERicYGrykeE3LSC6CRpaEUTdJZuXFLGwSrTrhVfyHzqFXaV29SXAqXYKe6YSl_y-Cla8Bk_uRDjc08PzST1DsBve2bB8rkpAi-ssbmbPSSc3BX__GSoL-CYVVDW5cj9eQf1YBL_STc0eOsVrsYYZYJaoNBw')"></div>
+<div class="w-16 h-16 rounded-full border-4 border-secondary-container bg-cover bg-center rotate-[-1deg]" data-alt="Candid portrait of a trendy man in front of a colorful landmark, Gen-Z energy, professional creator lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0Zl6OkZPTWkvQuAnpIQCE6Vt-l-qKkssXo_xBf2LGehfdaj6vu_dllGCYMosQiODH_TYmj7_auWdjKwJezsnJ4VRf4oHJfCfj-9GMnhWJTAo44iDRpH3HJeq14vWCrCHIqY17pVtFkvmEA3CauJwTowFK941n-0g5X5M_mna0PAciy_4lCucHCzfJg2WWIc2Ew5Hbr68HbZ8zBZrBG4BSap0GLDvb3UhruTBytmXKSNCTGImWE52PLg')"></div>
+<div class="w-16 h-16 rounded-full border-4 border-secondary-container bg-on-secondary-container flex items-center justify-center text-secondary-container font-bold">+1k</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-section-gap bg-surface-container-low border-t border-outline-variant grid grid-cols-1 md:grid-cols-3 gap-gutter rounded-t-xl">
+<div class="space-y-4">
+<h4 class="font-headline-md text-headline-md text-primary italic">Have a Nice Gift</h4>
+<p class="text-body-md text-on-surface-variant max-w-xs">Curating moments of joy and adventure since 2024. Your premier destination for lifestyle gifting.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h5 class="font-label-bold text-label-bold text-on-surface mb-2">Helpful Links</h5>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Shipping</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Returns</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col justify-between items-start md:items-end">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">thumb_up</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">mail</span>
+</div>
+<p class="text-body-md text-on-surface-variant mt-8">© 2024 Have a Nice Gift. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Toggle Gift Fields Logic
+        const giftToggle = document.getElementById('gift-toggle');
+        const giftFields = document.getElementById('gift-fields');
+
+        giftToggle.addEventListener('change', function() {
+            if (this.checked) {
+                giftFields.classList.remove('hidden');
+                giftFields.classList.add('block');
+            } else {
+                giftFields.classList.add('hidden');
+                giftFields.classList.remove('block');
+            }
+        });
+
+        // Simple smooth scroll to top for footer links
+        document.querySelectorAll('footer a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body></html>

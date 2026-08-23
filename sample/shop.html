@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <!-- SEO: Primary Meta Tags -->
+  <title>Shop | Vasu Vlogs</title>
+  <meta name="title" content="Shop | Vasu Vlogs" />
+  <meta name="description" content="Curated essentials for travel, filming, and living your best lifestyle. Every item here is a staple in Vasu's daily workflow." />
+
+  <!-- Perf: resource hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://lh3.googleusercontent.com" />
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'vibrant-orange': '#f4761e',
+            'deep-navy': '#1a202c',
+            'surface-warm': '#fff8f2',
+            'accent-blue': '#4a90e2',
+            'accent-yellow': '#ffd100'
+          },
+          animation: {
+            'spin-slow': 'spin 15s linear infinite'
+          },
+          fontFamily: {
+            'sans': ['Plus Jakarta Sans', 'sans-serif'],
+            'impact': ['Impact', 'Haettenschweiler', 'Arial Narrow Bold', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style data-purpose="custom-typography">
+    .headline-huge {
+      font-family: 'Impact', sans-serif;
+      line-height: 0.85;
+      letter-spacing: -0.02em;
+    }
+    .handwriting {
+      font-family: 'Brush Script MT', cursive;
+    }
+    .rotated-text {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+  <style data-purpose="decorative-elements">
+    .bg-vasu-yellow {
+      --tw-bg-opacity: 1;
+      background-color: rgb(255 211 105 / var(--tw-bg-opacity, 1));
+    }
+    .blob-bg {
+      background-color: #ffd100;
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    }
+    .sticker-badge {
+      border: 3px solid #000;
+      box-shadow: 4px 4px 0px #000;
+    }
+    .card-shadow {
+      box-shadow: 8px 8px 0px #1a202c;
+    }
+  </style>
+</head>
+
+<body class="bg-surface-warm font-sans text-deep-navy overflow-x-hidden">
+  <!-- BEGIN: Navigation -->
+  <nav class="flex justify-between items-center px-6 py-6 md:px-12 max-w-7xl mx-auto relative z-50" aria-label="Primary">
+    <a href="#home" class="relative group flex-shrink-0" aria-label="Vasu Vlogs home">
+      <div
+        class="w-16 h-16 bg-accent-yellow rounded-full flex items-center justify-center sticker-badge transform rotate-12 cursor-pointer hover:rotate-0 transition-transform">
+        <div class="text-[10px] font-black text-center leading-none">
+          Vasu <br /> VLOGS
+        </div>
+      </div>
+    </a>
+
+    <!-- Desktop nav links -->
+    <ul class="hidden lg:flex items-center gap-10 font-bold text-sm uppercase tracking-wide">
+      <li><a href="home.html" class="hover:text-vibrant-orange transition-colors">Home</a></li>
+      <li><a href="collab.html" class="hover:text-vibrant-orange transition-colors">Collab</a></li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <a class="hidden sm:inline-block border-2 border-deep-navy px-6 py-2 bg-deep-navy text-white rounded-full font-bold text-sm hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter shadow-md"
+        href="shop.html">
+        Visit My Store
+      </a>
+      <!-- Mobile menu toggle -->
+      <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
+        class="lg:hidden w-12 h-12 border-2 border-deep-navy rounded-full flex items-center justify-center bg-white sticker-badge">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-width="2"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-surface-warm">
+    <div class="flex justify-end px-6 py-6">
+      <button id="menu-close" type="button" aria-label="Close menu"
+        class="w-12 h-12 border-2 border-deep-navy rounded-full flex items-center justify-center bg-white sticker-badge">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke-linecap="round" stroke-width="2"></path>
+        </svg>
+      </button>
+    </div>
+    <ul class="flex flex-col items-center justify-center gap-10 headline-huge uppercase text-4xl -mt-24 h-full">
+      <li><a href="home2.html" class="mobile-nav-link hover:text-vibrant-orange transition-colors">Home</a></li>
+      <li><a href="book_collab.html" class="mobile-nav-link hover:text-vibrant-orange transition-colors">Collab</a></li>
+      <li><a href="creator_toolkit_recommendations.html" class="mobile-nav-link hover:text-vibrant-orange transition-colors">Visit Store</a></li>
+    </ul>
+  </div>
+  <!-- END: Navigation -->
+  <main class="pt-20 pb-16 border-b-4 border-deep-navy relative overflow-hidden bg-vasu-yellow">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
+      <div class="absolute -top-10 left-10 hidden lg:block">
+        <div class="bg-vibrant-orange text-white w-32 h-32 rounded-full flex flex-col items-center justify-center font-black rotate-12 sticker-badge text-center leading-tight">
+          <span class="material-symbols-outlined text-3xl mb-1">flight_takeoff</span>
+          CREATOR<br/>APPROVED
+        </div>
+      </div>
+      
+      <div class="max-w-4xl mx-auto space-y-6">
+        <h1 class="headline-huge text-6xl md:text-8xl text-deep-navy uppercase leading-none mt-6">
+          My <span class="text-white italic handwriting underline decoration-4 underline-offset-8">Affiliate</span> Shop
+        </h1>
+        <p class="font-bold text-lg max-w-2xl mx-auto">
+          Curated essentials for travel, filming, and living your best lifestyle. Every item here is a staple in my daily workflow or suitcase.
+        </p>
+        
+        <div class="flex flex-wrap justify-center gap-4 pt-8">
+          <a class="border-2 border-deep-navy px-8 py-3 bg-white text-deep-navy rounded-full font-bold text-sm hover:bg-deep-navy hover:text-white transition-all uppercase tracking-tighter card-shadow" href="#travel">Travel Essentials</a>
+          <a class="border-2 border-deep-navy px-8 py-3 bg-white text-deep-navy rounded-full font-bold text-sm hover:bg-deep-navy hover:text-white transition-all uppercase tracking-tighter card-shadow" href="#filming">Filming Gear</a>
+          <a class="border-2 border-deep-navy px-8 py-3 bg-white text-deep-navy rounded-full font-bold text-sm hover:bg-deep-navy hover:text-white transition-all uppercase tracking-tighter card-shadow" href="#fashion">Fashion Favorites</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Travel Essentials Section -->
+  <section class="bg-[#90C2E7] py-10 border-y-4 border-deep-navy" id="travel">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      <div class="flex items-center gap-4 mb-10">
+        <h2 class="headline-huge text-4xl md:text-5xl uppercase text-deep-navy">Promotion's</h2>
+        <div class="h-2 flex-grow bg-white mt-4 border-2 border-deep-navy"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Feature Card 1 -->
+        <article class="bg-white border-4 border-deep-navy card-shadow rounded-2xl flex flex-col md:flex-row group hover:-translate-y-2 transition-transform">
+          <div class="md:w-1/2 h-48 md:h-auto border-b-4 md:border-b-0 md:border-r-4 border-deep-navy overflow-hidden bg-gray-100 relative">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist, sleek carry-on suitcase in a deep navy blue, placed in a bright, modern airport lounge with large windows. Warm golden hour light pours into the space, reflecting off the suitcase's textured surface. The aesthetic is premium and ready for global adventure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW5d2VlVtTfq-RzM45U-hbJiWebKWKl3YTre6UCvfoSCrgrQaqb-CrAdyfJC8cNQwHomqt8pH-vwFt8-Q_y9vM_hUHreP1_-ZaYmwjeeNeX5iT60oV6rNjf8DEoBEspbPMaR20sm36Si_ELQ8RPgX5Vblfbi6s9W7n7CYOO_XWxZzJvoLgs-vLB0kBf5bmtVjusrgDqrLiw1KdKTKl9zjNZZWcIL1nji7RJhzce_IUKiJ6TvLiyudz-w"/>
+            <div class="absolute top-4 left-4 bg-vasu-yellow border-2 border-deep-navy px-3 py-1 text-xs font-black uppercase tracking-widest sticker-badge -rotate-3">Must-Have</div>
+          </div>
+          <div class="md:w-1/2 p-6 flex flex-col justify-center space-y-4">
+            <h3 class="headline-huge text-2xl uppercase">Monos Carry-On Plus</h3>
+            <p class="font-medium text-gray-700">The wheels are like butter. It fits everything for a week-long trip without checking a bag.</p>
+            <a href="#" class="w-fit border-2 border-deep-navy px-6 py-2 bg-deep-navy text-white rounded-full font-bold hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">Get Link &rarr;</a>
+          </div>
+        </article>
+        <!-- Feature Card 2 -->
+        <article class="bg-white border-4 border-deep-navy card-shadow rounded-2xl flex flex-col md:flex-row group hover:-translate-y-2 transition-transform">
+          <div class="md:w-1/2 h-48 md:h-auto border-b-4 md:border-b-0 md:border-r-4 border-deep-navy overflow-hidden bg-gray-100 relative">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-end noise-canceling headphones in a soft sand color, resting on a white marble surface next to a passport and a small succulent. The lighting is soft and airy, creating a calm and professional travel vibe. The color palette is composed of creams, navy blue accents, and subtle teal tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwAKchyeBOPAfl7XbfhakLDnA5H33fhM7aL1hxfKgKiwyTtiUYKuMDPXwtcU17xLvXzEWhUCNoX3lhwjuaDdprYWlNjBTGx4oI6LK_6IUyrTSTsbMSXedvzs7DZ23O0lKBn4dGNeDNIKESj3wxPj64UlrquCGNtEFsU4exwTpxU-fFNO5DxbHlAqjxw0-X-6M2yl0k1SVMlM2SO9T2ASrpxe4FTBIa6hLo7hHbwnilOBV6moszHTb47A"/>
+            <div class="absolute top-4 left-4 bg-pink-300 border-2 border-deep-navy px-3 py-1 text-xs font-black uppercase tracking-widest sticker-badge rotate-3">Long Haul</div>
+          </div>
+          <div class="md:w-1/2 p-6 flex flex-col justify-center space-y-4">
+            <h3 class="headline-huge text-2xl uppercase">Sony WH-1000XM5</h3>
+            <p class="font-medium text-gray-700">Essential for long flights. The noise canceling is magical—it turns a noisy plane into a silent office.</p>
+            <a href="#" class="w-fit border-2 border-deep-navy px-6 py-2 bg-deep-navy text-white rounded-full font-bold hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">Get Link &rarr;</a>
+          </div>
+        </article>
+        
+        <!-- Promo Card 1 -->
+        <article class="bg-white border-4 border-deep-navy card-shadow rounded-2xl flex flex-col md:flex-row group hover:-translate-y-2 transition-transform">
+          <div class="md:w-1/2 h-48 md:h-auto border-b-4 md:border-b-0 md:border-r-4 border-deep-navy overflow-hidden relative">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Face cream" src="https://images.unsplash.com/photo-1615397323136-1e0e5a872cc4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"/>
+            <div class="absolute top-4 left-4 bg-accent-yellow border-2 border-deep-navy px-3 py-1 text-xs font-black uppercase tracking-widest sticker-badge rotate-3">Special Offer</div>
+          </div>
+          <div class="md:w-1/2 p-6 flex flex-col justify-center space-y-4">
+            <h3 class="headline-huge text-2xl uppercase">Glow Face Cream</h3>
+            <p class="font-medium text-gray-700">My go-to skincare for travel. Keeps my skin hydrated on long flights. Use code <span class="bg-vibrant-orange text-white px-2 py-1 font-bold">VASUVLOGS</span> for 20% off.</p>
+            <a href="#" class="w-fit border-2 border-deep-navy px-6 py-2 bg-deep-navy text-white rounded-full font-bold hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">Claim Offer &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Promo Card 2 -->
+        <article class="bg-white border-4 border-deep-navy card-shadow rounded-2xl flex flex-col md:flex-row group hover:-translate-y-2 transition-transform">
+          <div class="md:w-1/2 h-48 md:h-auto border-b-4 md:border-b-0 md:border-r-4 border-deep-navy overflow-hidden relative">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Washing liquid" src="https://images.unsplash.com/photo-1584824486516-0555a07fc511?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"/>
+            <div class="absolute top-4 left-4 bg-pink-300 border-2 border-deep-navy px-3 py-1 text-xs font-black uppercase tracking-widest sticker-badge -rotate-3">Discount</div>
+          </div>
+          <div class="md:w-1/2 p-6 flex flex-col justify-center space-y-4">
+            <h3 class="headline-huge text-2xl uppercase">Travel Wash Liquid</h3>
+            <p class="font-medium text-gray-700">Perfect for washing clothes in hotel sinks. Smells amazing. Use code <span class="bg-accent-blue text-white px-2 py-1 font-bold">VASUVLOGS</span> for 15% off.</p>
+            <a href="#" class="w-fit border-2 border-deep-navy px-6 py-2 bg-deep-navy text-white rounded-full font-bold hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">Claim Offer &rarr;</a>
+          </div>
+        </article>
+        
+        <!-- Promo Card 3 -->
+        <article class="bg-white border-4 border-deep-navy card-shadow rounded-2xl flex flex-col md:flex-row group hover:-translate-y-2 transition-transform">
+          <div class="md:w-1/2 h-48 md:h-auto border-b-4 md:border-b-0 md:border-r-4 border-deep-navy overflow-hidden relative">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Clothes" src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"/>
+            <div class="absolute top-4 left-4 bg-vibrant-orange border-2 border-deep-navy px-3 py-1 text-xs font-black uppercase tracking-widest sticker-badge rotate-6 text-white">Promo</div>
+          </div>
+          <div class="md:w-1/2 p-6 flex flex-col justify-center space-y-4">
+            <h3 class="headline-huge text-2xl uppercase">Everyday Linen Shirt</h3>
+            <p class="font-medium text-gray-700">Wrinkle-free clothes for any weather. Super comfy. Use code <span class="bg-accent-yellow text-deep-navy px-2 py-1 font-bold">VASUVLOGS</span> for free shipping.</p>
+            <a href="#" class="w-fit border-2 border-deep-navy px-6 py-2 bg-deep-navy text-white rounded-full font-bold hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">Claim Offer &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Promo Card 4 -->
+        <article class="bg-white border-4 border-deep-navy card-shadow rounded-2xl flex flex-col md:flex-row group hover:-translate-y-2 transition-transform">
+          <div class="md:w-1/2 h-48 md:h-auto border-b-4 md:border-b-0 md:border-r-4 border-deep-navy overflow-hidden relative">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Backpack" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"/>
+            <div class="absolute top-4 left-4 bg-deep-navy text-white border-2 border-deep-navy px-3 py-1 text-xs font-black uppercase tracking-widest sticker-badge -rotate-6">Exclusive</div>
+          </div>
+          <div class="md:w-1/2 p-6 flex flex-col justify-center space-y-4">
+            <h3 class="headline-huge text-2xl uppercase">Creator Backpack</h3>
+            <p class="font-medium text-gray-700">Fits all my cameras and clothes. Lifetime warranty. Use code <span class="bg-pink-300 text-deep-navy px-2 py-1 font-bold">VASUVLOGS</span> for 10% off.</p>
+            <a href="#" class="w-fit border-2 border-deep-navy px-6 py-2 bg-deep-navy text-white rounded-full font-bold hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">Claim Offer &rarr;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filming Gear Section -->
+  <section class="max-w-7xl mx-auto px-6 md:px-12 py-10" id="filming">
+    <div class="flex items-center gap-4 mb-10">
+      <h2 class="headline-huge text-4xl md:text-5xl uppercase text-deep-navy">Filming Gear</h2>
+      <div class="h-2 flex-grow bg-accent-blue mt-4"></div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Item 1 -->
+      <article class="bg-white border-4 border-deep-navy card-shadow rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform">
+        <div class="relative h-48 border-b-4 border-deep-navy overflow-hidden bg-gray-100">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional mirrorless camera set against a warm, sun-drenched studio background with soft orange and cream tones. The camera is clean, high-tech, and reflects a professional creator aesthetic. Soft ambient lighting emphasizes the sleek textures of the lens and body." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMOUWA_93XTEoyDP2WhlgbYL0CuUrhEJ_k1FhOhgd8rkZdctbSJU3PFdB3uDORNnKeDgFAWB19ortDE1MVWb0YqPdgTTd-US0S3wh_EnuWdk6CJ__rZvUGqCmA_Sli4WgFxJeJcQ3Pfruo8_GFflcAfTtDQbJ0B0syXTn45NP4OpI__y64R9u1q_G2QO_OchM0ZXYCY6Dj_q50IF9oPL1WHONXD96g-EDfDGEofzngUxJBZIcHRg0U9A"/>
+          <div class="absolute top-4 right-4 bg-accent-yellow border-2 border-deep-navy sticker-badge rounded-full w-12 h-12 flex items-center justify-center rotate-6">
+            <span class="material-symbols-outlined text-deep-navy font-bold">videocam</span>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="headline-huge text-2xl uppercase mb-3">Sony Alpha 7 IV</h3>
+          <p class="font-medium text-gray-700 leading-relaxed mb-6 flex-grow">
+            <span class="font-bold text-vibrant-orange uppercase tracking-wide">Why I Love It:</span> The autofocus is unbeatable for solo vlogging. It captures colors perfectly, making my travel vlogs look cinematic right out of the camera.
+          </p>
+          <a href="#" class="w-full border-2 border-deep-navy py-3 bg-deep-navy text-white rounded-full font-bold text-center hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">
+            Shop on Amazon &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Item 2 -->
+      <article class="bg-white border-4 border-deep-navy card-shadow rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform">
+        <div class="relative h-48 border-b-4 border-deep-navy overflow-hidden bg-gray-100">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-end compact vlogging microphone with a furry windscreen, placed on a light oak wooden table. The lighting is warm and inviting, casting soft shadows. The background features blurred green plants and a lifestyle creator workspace aesthetic in warm cream and navy hues." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5YNLjpj6qKyK9_89MSXb6mF9C_mdNtj76CoVJr-2E-1l_eogAwuk4TJ-C2yRbIG-eyQr9n7l8d7wAlQs4Wf4bbnM7Yk5_EKFeTHZEpWKmG2ATyI_Eta-SJ3OSrMPSmBVrshZeax0F99W7eGVegxq-eWcVEXJolMml-LCfxq9Ux2dY8-vBYbdXpSFWUClRzvtrMqBn2cE7Dux_XPTAtnmwYundq2uq2LP9awFOiPc8m8sIZpGPRp7gtg"/>
+          <div class="absolute top-4 right-4 bg-accent-blue border-2 border-deep-navy sticker-badge rounded-full w-12 h-12 flex items-center justify-center -rotate-6">
+            <span class="material-symbols-outlined text-white font-bold">mic</span>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="headline-huge text-2xl uppercase mb-3">Rode Wireless Go II</h3>
+          <p class="font-medium text-gray-700 leading-relaxed mb-6 flex-grow">
+            <span class="font-bold text-vibrant-orange uppercase tracking-wide">Why I Love It:</span> Crisp audio is non-negotiable. These are so small they don't distract from the outfit, and the range is incredible for street interviews.
+          </p>
+          <a href="#" class="w-full border-2 border-deep-navy py-3 bg-deep-navy text-white rounded-full font-bold text-center hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">
+            Shop on Amazon &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Item 3 -->
+      <article class="bg-white border-4 border-deep-navy card-shadow rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform">
+        <div class="relative h-48 border-b-4 border-deep-navy overflow-hidden bg-gray-100">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A flexible gorilla-style tripod wrapped around a modern camera, positioned on a vibrant orange surface. The background is a minimalist studio with teal accents. The lighting is bright and energetic, highlighting the durable and organic shape of the tripod legs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa7KjEzrkf6wt4vTH7LXx9OL6Svm8rmQ41iUXngtS4Wifo-eL7H4YvRlIFaWedC2ReWVTMPsqmBDYOrb4l9vZJY949MOVegs-7t1pM3HrMlMIiror4MqTCFHAWKh5ZcJbvq3SF_Zkq81tvWRD0D-tH4YzC6EHVz-FhLKnJnBRkbbyQpGvggVFGq8j83IozjIJ_J14Ijoja-Xb19rmiJbtvEaBhqq1z744LC0x1f6mUGURgUscoKinvgQ"/>
+          <div class="absolute top-4 right-4 bg-vibrant-orange border-2 border-deep-navy sticker-badge rounded-full w-12 h-12 flex items-center justify-center rotate-12">
+            <span class="material-symbols-outlined text-white font-bold">straighten</span>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="headline-huge text-2xl uppercase mb-3">Joby GorillaPod 3K</h3>
+          <p class="font-medium text-gray-700 leading-relaxed mb-6 flex-grow">
+            <span class="font-bold text-vibrant-orange uppercase tracking-wide">Why I Love It:</span> It's light enough to carry all day. I wrap it around trees, fences, or just use it as a handle for steady walking shots.
+          </p>
+          <a href="#" class="w-full border-2 border-deep-navy py-3 bg-deep-navy text-white rounded-full font-bold text-center hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">
+            Shop on Amazon &rarr;
+          </a>
+        </div>
+      </article>
+      <!-- Item 4 -->
+      <article class="bg-white border-4 border-deep-navy card-shadow rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform">
+        <div class="relative h-48 border-b-4 border-deep-navy overflow-hidden bg-gray-100">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sleek drone" src="https://images.unsplash.com/photo-1579822606822-495147575294?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"/>
+          <div class="absolute top-4 right-4 bg-accent-blue border-2 border-deep-navy sticker-badge rounded-full w-12 h-12 flex items-center justify-center -rotate-12">
+            <span class="material-symbols-outlined text-white font-bold">flight</span>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="headline-huge text-2xl uppercase mb-3">DJI Mini 3 Pro</h3>
+          <p class="font-medium text-gray-700 leading-relaxed mb-6 flex-grow">
+            <span class="font-bold text-vibrant-orange uppercase tracking-wide">Why I Love It:</span> Essential for cinematic b-roll and aerial shots. It’s so light I take it everywhere.
+          </p>
+          <a href="#" class="w-full border-2 border-deep-navy py-3 bg-deep-navy text-white rounded-full font-bold text-center hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">
+            Shop on Amazon &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Item 5 -->
+      <article class="bg-white border-4 border-deep-navy card-shadow rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform">
+        <div class="relative h-48 border-b-4 border-deep-navy overflow-hidden bg-gray-100">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Portable lighting" src="https://images.unsplash.com/photo-1582207936109-7756f7e416a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"/>
+          <div class="absolute top-4 right-4 bg-accent-yellow border-2 border-deep-navy sticker-badge rounded-full w-12 h-12 flex items-center justify-center rotate-6">
+            <span class="material-symbols-outlined text-deep-navy font-bold">lightbulb</span>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="headline-huge text-2xl uppercase mb-3">Aputure MC RGB Light</h3>
+          <p class="font-medium text-gray-700 leading-relaxed mb-6 flex-grow">
+            <span class="font-bold text-vibrant-orange uppercase tracking-wide">Why I Love It:</span> Perfect for adding a pop of color in the background of my talking head videos and reels.
+          </p>
+          <a href="#" class="w-full border-2 border-deep-navy py-3 bg-deep-navy text-white rounded-full font-bold text-center hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">
+            Shop on Amazon &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Item 6 -->
+      <article class="bg-white border-4 border-deep-navy card-shadow rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform">
+        <div class="relative h-48 border-b-4 border-deep-navy overflow-hidden bg-gray-100">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Camera backpack" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"/>
+          <div class="absolute top-4 right-4 bg-vibrant-orange border-2 border-deep-navy sticker-badge rounded-full w-12 h-12 flex items-center justify-center -rotate-6">
+            <span class="material-symbols-outlined text-white font-bold">backpack</span>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="headline-huge text-2xl uppercase mb-3">Everyday Backpack</h3>
+          <p class="font-medium text-gray-700 leading-relaxed mb-6 flex-grow">
+            <span class="font-bold text-vibrant-orange uppercase tracking-wide">Why I Love It:</span> Protects my gear, looks stylish, and fits under an airplane seat. The perfect daypack.
+          </p>
+          <a href="#" class="w-full border-2 border-deep-navy py-3 bg-deep-navy text-white rounded-full font-bold text-center hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">
+            Shop on Amazon &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Item 7 -->
+      <article class="bg-white border-4 border-deep-navy card-shadow rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform">
+        <div class="relative h-48 border-b-4 border-deep-navy overflow-hidden bg-gray-100">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Portable SSD" src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"/>
+          <div class="absolute top-4 right-4 bg-accent-blue border-2 border-deep-navy sticker-badge rounded-full w-12 h-12 flex items-center justify-center rotate-12">
+            <span class="material-symbols-outlined text-white font-bold">save</span>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="headline-huge text-2xl uppercase mb-3">SanDisk 2TB SSD</h3>
+          <p class="font-medium text-gray-700 leading-relaxed mb-6 flex-grow">
+            <span class="font-bold text-vibrant-orange uppercase tracking-wide">Why I Love It:</span> Fast, rugged, and tiny. I edit 4K footage directly off this drive while traveling.
+          </p>
+          <a href="#" class="w-full border-2 border-deep-navy py-3 bg-deep-navy text-white rounded-full font-bold text-center hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">
+            Shop on Amazon &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Item 8 -->
+      <article class="bg-white border-4 border-deep-navy card-shadow rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform">
+        <div class="relative h-48 border-b-4 border-deep-navy overflow-hidden bg-gray-100">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Action Camera" src="https://images.unsplash.com/photo-1502920514313-52581002a659?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"/>
+          <div class="absolute top-4 right-4 bg-accent-yellow border-2 border-deep-navy sticker-badge rounded-full w-12 h-12 flex items-center justify-center -rotate-12">
+            <span class="material-symbols-outlined text-deep-navy font-bold">camera</span>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <h3 class="headline-huge text-2xl uppercase mb-3">Insta360 X3</h3>
+          <p class="font-medium text-gray-700 leading-relaxed mb-6 flex-grow">
+            <span class="font-bold text-vibrant-orange uppercase tracking-wide">Why I Love It:</span> Captures impossible angles. I mount this on my car or helmet for immersive adventure shots.
+          </p>
+          <a href="#" class="w-full border-2 border-deep-navy py-3 bg-deep-navy text-white rounded-full font-bold text-center hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">
+            Shop on Amazon &rarr;
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Fashion Section -->
+  <section class="max-w-7xl mx-auto px-6 md:px-12 py-10" id="fashion">
+    <div class="flex items-center gap-4 mb-10">
+      <h2 class="headline-huge text-4xl md:text-5xl uppercase text-deep-navy">Fashion Favorites</h2>
+      <div class="h-2 flex-grow bg-vibrant-orange mt-4"></div>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Fashion Item 1 -->
+      <article class="bg-white p-4 border-4 border-deep-navy card-shadow rounded-2xl group hover:-translate-y-2 transition-transform">
+        <div class="relative rounded-xl overflow-hidden aspect-[3/4] border-4 border-deep-navy mb-4">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stylish, oversized linen shirt in a soft terracotta orange, hanging against a textured cream wall. The lighting is natural and dappled, suggesting a sunny Mediterranean afternoon. The photo style is high-end editorial lifestyle, clean and inviting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_gI_86nScyTSLwJWjgJi1GrO9t9QQDv63ViYojMkQ8mDvLa4gPOD49e0-ni_l7zgOOq36v5HmS31a5e3Xdk776Rkv0oBR2I_0GTIbF3WoAiLGhYj7t6cRkoR_mNserRS_U1MnJcbRN-sHBk8auM996IOOEXzJb3K_bK2Kx_Mt7V4lErXp39mPescRHbH0GxYJTPL1rQD4_eRiNIuos2mS9uECn4hSV1Kbz0Y1QkT6U6O38pk3qnmsog"/>
+          <div class="absolute bottom-3 left-3 sticker-badge bg-white px-2 py-1 rotate-3 font-black text-[10px] uppercase">
+            Staple
+          </div>
+        </div>
+        <h4 class="font-bold text-lg uppercase tracking-tight">The Linen Set</h4>
+        <p class="text-sm text-gray-600 mb-4">Perfect for humid climates and looking put-together on camera.</p>
+        <a href="#" class="inline-block border-2 border-deep-navy px-4 py-1 bg-deep-navy text-white rounded-full font-bold text-xs hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">Shop</a>
+      </article>
+
+      <!-- Fashion Item 2 -->
+      <article class="bg-white p-4 border-4 border-deep-navy card-shadow rounded-2xl group hover:-translate-y-2 transition-transform">
+        <div class="relative rounded-xl overflow-hidden aspect-[3/4] border-4 border-deep-navy mb-4">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Premium white leather sneakers with subtle navy blue detailing, shot on a minimalist background of warm concrete. The lighting is bright and clean, emphasizing the high-quality textures. The composition is modern and stylish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVFlCa_lDb1cZsBQbsvTetUIG6ZPxfsaagFY72wvlUxPNhRqgN2F73uqvE1Is2PrVoHDmLbssNU9u8hl5vNH_FIaPNcvk_k1hpoKS3WqZRfk7YgA3h8s5Ou9co_cg5W7i_9RLfS3H46EWLWdVnh8AeMs395eKgbvy4HRvrC5l8kQk7ng45SeLQEzX4RwEskH0oL_W_ffhUAgBzuzY8cWNTrYlMC1WnOxL04LTI9cHrYDaqI_qyoaDigg"/>
+        </div>
+        <h4 class="font-bold text-lg uppercase tracking-tight">Comfort Sneakers</h4>
+        <p class="text-sm text-gray-600 mb-4">Walked 20k steps in Tokyo with zero blisters. My holy grail travel shoe.</p>
+        <a href="#" class="inline-block border-2 border-deep-navy px-4 py-1 bg-deep-navy text-white rounded-full font-bold text-xs hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">Shop</a>
+      </article>
+
+      <!-- Fashion Item 3 -->
+      <article class="bg-white p-4 border-4 border-deep-navy card-shadow rounded-2xl group hover:-translate-y-2 transition-transform">
+        <div class="relative rounded-xl overflow-hidden aspect-[3/4] border-4 border-deep-navy mb-4">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sleek, high-quality leather passport holder in a vibrant teal color, paired with an elegant navy blue luggage tag. The items are neatly arranged on a clean white surface with soft side-lighting that highlights the grain of the leather." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnzfoc0IkjrDXHje2ol0N5M6tmeNW0l5VJIVwie50EflFs64zHFT9jPcDRaPnyb01SWopGutQ9pizqT3SySYIBTmLwzt7nTPgjB3arpD54_-BAFwzpvLXH8Mjv0c2wkbNEASzOvcGJ757Lz-sgA8nHE2oSqzx35_B6yh1RNnMNQ123h8H_T8ROHfhvR-VwoIUPj_QvzEkiSOBqFgnL5fqK4ZMtGQlpdGD6KNGuC6RtKR3K8e2EHZ1lcQ"/>
+        </div>
+        <h4 class="font-bold text-lg uppercase tracking-tight">Passport Kit</h4>
+        <p class="text-sm text-gray-600 mb-4">Stay organized and stylish at customs. High quality leather that ages beautifully.</p>
+        <a href="#" class="inline-block border-2 border-deep-navy px-4 py-1 bg-deep-navy text-white rounded-full font-bold text-xs hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">Shop</a>
+      </article>
+
+      <!-- Fashion Item 4 -->
+      <article class="bg-white p-4 border-4 border-deep-navy card-shadow rounded-2xl group hover:-translate-y-2 transition-transform">
+        <div class="relative rounded-xl overflow-hidden aspect-[3/4] border-4 border-deep-navy mb-4">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A pair of designer sunglasses with a classic tortoiseshell frame, resting on a sun-bleached wooden surface with a glass of iced coffee in the blurred background. The mood is relaxed, summer-inspired, and premium lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_sQ-QaFcbruAiLUVKng_zMFK5jCihzyAYrbMC3tx9GG3TmZogeTTKVuR6FadJqh4VB-4gMG8Au7ASv84V9cSzEW-ke8rtoliBVeMrHSoZ408ukrijSNdID7P1m94HP22PprXIds2cdDFRTbQLJTtixoUAsdCl6Ech2bZyVAmKqRc1YIzB5nasUu2XsZO_xgyMTpXlElxvusUxfcB6fnM5RuSLNVrhh5OI4Nr2CT6oA_m-5peJodzHGg"/>
+        </div>
+        <h4 class="font-bold text-lg uppercase tracking-tight">The Sunnies</h4>
+        <p class="text-sm text-gray-600 mb-4">Classic frame that fits every face shape. My everyday signature look.</p>
+        <a href="#" class="inline-block border-2 border-deep-navy px-4 py-1 bg-deep-navy text-white rounded-full font-bold text-xs hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">Shop</a>
+      </article>
+
+      <!-- Fashion Item 5 -->
+      <article class="bg-white p-4 border-4 border-deep-navy card-shadow rounded-2xl group hover:-translate-y-2 transition-transform">
+        <div class="relative rounded-xl overflow-hidden aspect-[3/4] border-4 border-deep-navy mb-4">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxury watch" src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"/>
+          <div class="absolute top-3 right-3 bg-accent-yellow sticker-badge text-deep-navy px-2 py-1 rotate-6 font-black text-[10px] uppercase">
+            Reel Promo
+          </div>
+        </div>
+        <h4 class="font-bold text-lg uppercase tracking-tight">Everyday Watch</h4>
+        <p class="text-sm text-gray-600 mb-4">Timeless design. As seen in my "Get Ready With Me" reel.</p>
+        <a href="#" class="inline-block border-2 border-deep-navy px-4 py-1 bg-deep-navy text-white rounded-full font-bold text-xs hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">Shop Now</a>
+      </article>
+
+      <!-- Fashion Item 6 -->
+      <article class="bg-white p-4 border-4 border-deep-navy card-shadow rounded-2xl group hover:-translate-y-2 transition-transform">
+        <div class="relative rounded-xl overflow-hidden aspect-[3/4] border-4 border-deep-navy mb-4">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Skincare" src="https://images.unsplash.com/photo-1615397323136-1e0e5a872cc4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"/>
+          <div class="absolute bottom-3 left-3 bg-white sticker-badge px-2 py-1 -rotate-3 font-black text-[10px] uppercase">
+            Essentials
+          </div>
+        </div>
+        <h4 class="font-bold text-lg uppercase tracking-tight">Skincare Set</h4>
+        <p class="text-sm text-gray-600 mb-4">My daily travel routine to keep my skin clear on the go.</p>
+        <a href="#" class="inline-block border-2 border-deep-navy px-4 py-1 bg-deep-navy text-white rounded-full font-bold text-xs hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">Shop Now</a>
+      </article>
+
+      <!-- Fashion Item 7 -->
+      <article class="bg-white p-4 border-4 border-deep-navy card-shadow rounded-2xl group hover:-translate-y-2 transition-transform">
+        <div class="relative rounded-xl overflow-hidden aspect-[3/4] border-4 border-deep-navy mb-4">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Premium joggers" src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"/>
+        </div>
+        <h4 class="font-bold text-lg uppercase tracking-tight">Performance Joggers</h4>
+        <p class="text-sm text-gray-600 mb-4">The most comfortable pants for long editing sessions or long flights.</p>
+        <a href="#" class="inline-block border-2 border-deep-navy px-4 py-1 bg-deep-navy text-white rounded-full font-bold text-xs hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">Shop Now</a>
+      </article>
+
+      <!-- Fashion Item 8 -->
+      <article class="bg-white p-4 border-4 border-deep-navy card-shadow rounded-2xl group hover:-translate-y-2 transition-transform">
+        <div class="relative rounded-xl overflow-hidden aspect-[3/4] border-4 border-deep-navy mb-4">
+          <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Ring Light" src="https://images.unsplash.com/photo-1621532847621-e8d197af0d9f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"/>
+          <div class="absolute top-3 right-3 bg-vibrant-orange sticker-badge text-white px-2 py-1 rotate-12 font-black text-[10px] uppercase">
+            Top Pick
+          </div>
+        </div>
+        <h4 class="font-bold text-lg uppercase tracking-tight">Ring Light Kit</h4>
+        <p class="text-sm text-gray-600 mb-4">The secret to perfect TikTok and Reel lighting from anywhere.</p>
+        <a href="#" class="inline-block border-2 border-deep-navy px-4 py-1 bg-deep-navy text-white rounded-full font-bold text-xs hover:bg-transparent hover:text-deep-navy transition-all uppercase tracking-tighter">Shop Now</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Newsletter / CTA -->
+  <section class="max-w-7xl mx-auto px-6 md:px-12 py-24">
+    <div class="bg-vibrant-orange border-4 border-deep-navy card-shadow rounded-2xl p-8 md:p-16 text-center space-y-6 relative overflow-hidden group hover:shadow-[12px_12px_0px_#1a202c] transition-all">
+      <div class="absolute -top-10 -right-10 bg-accent-yellow w-32 h-32 rounded-full border-4 border-deep-navy hidden md:block"></div>
+      <div class="absolute -bottom-10 -left-10 bg-accent-blue w-24 h-24 rounded-full border-4 border-deep-navy hidden md:block"></div>
+      
+      <h2 class="headline-huge text-4xl md:text-5xl text-white uppercase drop-shadow-[2px_2px_0px_#1a202c] relative z-10">Get Weekly Gear Drops</h2>
+      <p class="font-bold text-lg text-deep-navy max-w-xl mx-auto relative z-10">
+        I constantly test new tech and fashion. Sign up to get my honest reviews and "best of" lists directly in your inbox before they hit the channel.
+      </p>
+      
+      <form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto relative z-10">
+        <input class="flex-grow px-6 py-4 rounded-full border-4 border-deep-navy bg-white text-deep-navy font-bold focus:outline-none focus:ring-4 focus:ring-deep-navy placeholder:text-gray-500" placeholder="Your email address" type="email"/>
+        <button class="px-8 py-4 bg-deep-navy text-white rounded-full font-bold uppercase tracking-tighter hover:bg-transparent hover:text-deep-navy border-4 border-transparent hover:border-deep-navy transition-all whitespace-nowrap">Join The List</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- BEGIN: Footer -->
+  <footer class="bg-deep-navy text-white pt-16 pb-10 px-6 md:px-12 relative border-t-4 border-vibrant-orange">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 pb-12">
+
+        <!-- Brand blurb -->
+        <div class="text-center md:text-left max-w-md">
+          <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
+            <div
+              class="w-14 h-14 bg-accent-yellow rounded-full flex items-center justify-center border-3 border-white shadow-[4px_4px_0px_#f4761e] transform -rotate-6">
+              <div class="text-[9px] font-black text-center leading-none text-deep-navy">Vasu <br />Vlogs</div>
+            </div>
+            <span class="headline-huge text-2xl uppercase">Vasu Vlogs</span>
+          </div>
+          <p class="text-sm font-medium text-white/70 mb-4">
+            Instagram influencer, RJ/VJ and event host based in Tenkasi — creating content, hosting live
+            experiences, and partnering with brands worldwide.
+          </p>
+        </div>
+
+        <!-- Social -->
+        <div class="flex items-center gap-3">
+          <a href="https://www.instagram.com/vasuvlogs" target="_blank" rel="noopener noreferrer"
+            aria-label="Vasu Vlogs on Instagram"
+            class="w-11 h-11 bg-white text-deep-navy rounded-full flex items-center justify-center border-2 border-white hover:bg-vibrant-orange hover:text-white transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+              </path>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@vasuvlogs" target="_blank" rel="noopener noreferrer"
+            aria-label="Vasu Vlogs on YouTube"
+            class="w-11 h-11 bg-white text-deep-navy rounded-full flex items-center justify-center border-2 border-white hover:bg-vibrant-orange hover:text-white transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M23.498 6.186a2.994 2.994 0 00-2.112-2.115C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.386.526A2.994 2.994 0 00.502 6.186 31.03 31.03 0 000 12a31.03 31.03 0 00.502 5.814 2.994 2.994 0 002.112 2.115c1.881.526 9.386.526 9.386.526s7.505 0 9.386-.526a2.994 2.994 0 002.112-2.115A31.03 31.03 0 0024 12a31.03 31.03 0 00-.502-5.814zM9.75 15.545V8.455L15.75 12l-6 3.545z">
+              </path>
+            </svg>
+          </a>
+          <a href="mailto:collab@vasuvlogs.com" aria-label="Email Vasu Vlogs"
+            class="w-11 h-11 bg-white text-deep-navy rounded-full flex items-center justify-center border-2 border-white hover:bg-vibrant-orange hover:text-white transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="border-t-2 border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-white/70">
+        <p class="text-xs font-bold uppercase tracking-widest text-center md:text-left">
+          © <span id="footer-year">2026</span> Vasu Vlogs. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+
+  <script>
+    // Mobile menu toggle logic
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function openMenu() {
+      mobileMenu.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      menuToggle.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+      document.body.style.overflow = '';
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    menuToggle.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+  </script>
+</body>
+</html>

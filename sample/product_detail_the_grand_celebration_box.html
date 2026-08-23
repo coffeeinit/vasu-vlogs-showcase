@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Grand Celebration Box | Have a Nice Gift</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Nunito+Sans:wght@400;700&amp;family=Playfair+Display:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#773300",
+                        "tertiary-fixed": "#ffdf9e",
+                        "tertiary": "#795900",
+                        "surface-variant": "#e8e1dc",
+                        "outline": "#8b7265",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#d2e4ff",
+                        "on-secondary-fixed": "#001c38",
+                        "surface-container-highest": "#e8e1dc",
+                        "primary-fixed-dim": "#ffb68e",
+                        "surface": "#fff8f2",
+                        "surface-tint": "#9c4500",
+                        "surface-white": "#FFFFFF",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#ffb68e",
+                        "tertiary-container": "#c2930f",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#abc9f2",
+                        "on-secondary-fixed-variant": "#2b486b",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "teal-accent": "#2FB6A5",
+                        "ink-black": "#0D1B2B",
+                        "outline-variant": "#dfc0b1",
+                        "surface-container-low": "#f9f2ec",
+                        "on-surface": "#1e1b18",
+                        "inverse-on-surface": "#f6f0ea",
+                        "surface-container-high": "#eee7e1",
+                        "on-surface-variant": "#584237",
+                        "on-background": "#1e1b18",
+                        "on-tertiary-fixed": "#261a00",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#ffdbca",
+                        "surface-bright": "#fff8f2",
+                        "on-tertiary-fixed-variant": "#5b4300",
+                        "on-secondary-container": "#3f5b7f",
+                        "primary-container": "#f4761e",
+                        "primary": "#9c4500",
+                        "on-primary-container": "#562300",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#b6d4fe",
+                        "secondary": "#436084",
+                        "tertiary-fixed-dim": "#f4bf40",
+                        "inverse-surface": "#33302c",
+                        "background": "#fff8f2",
+                        "on-tertiary-container": "#422f00",
+                        "on-primary-fixed": "#331200",
+                        "surface-container": "#f3ede7",
+                        "surface-dim": "#dfd9d3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "base": "8px",
+                        "section-gap": "80px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-xl-mobile": ["Plus Jakarta Sans"],
+                        "label-bold": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Nunito Sans"],
+                        "body-lg": ["Nunito Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-xl-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "800"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pill-shadow {
+            box-shadow: 0 4px 12px rgba(13, 27, 43, 0.05);
+        }
+        .vibrant-card {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .vibrant-card:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+        .watermark-bg {
+            background-image: radial-gradient(circle at 2px 2px, #dfd9d3 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .sticker-rotate {
+            transform: rotate(-3deg);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto left-1/2 -translate-x-1/2 bg-surface dark:bg-surface-dim shadow-[0_4px_12px_rgba(13,27,43,0.05)] rounded-b-xl">
+<div class="font-headline-lg text-headline-lg font-extrabold text-primary dark:text-primary-fixed-dim italic">
+            Have a Nice Gift
+        </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-label-bold text-label-bold" href="#">Home</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary pb-1 font-label-bold text-label-bold" href="#">Collections</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary transition-colors font-label-bold text-label-bold" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors relative">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+<span class="absolute top-0 right-0 bg-primary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">2</span>
+</button>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined text-primary">search</span>
+</button>
+</div>
+</header>
+<main class="pt-24 watermark-bg min-h-screen">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+<!-- Product Gallery -->
+<div class="relative group">
+<div class="relative aspect-square overflow-hidden rounded-[48px] bg-white shadow-xl ring-8 ring-white/20">
+<img class="w-full h-full object-cover" data-alt="A premium, overhead studio shot of a luxurious black and gold 'Grand Celebration Box' gift set. Inside the velvet-lined box are a bottle of vintage champagne, artisan chocolates in gold foil, and a small silk pouch. The lighting is warm and cinematic, highlighting the textures of the satin ribbon and embossed paper. The background is a soft cream with delicate floral patterns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBRLA_ytuZSGre8XzYO3I8ogI9BFiFPpqE0Zn9YNJpcrPWal-69UZrG-7uIkLCsLVrh3Bmu8khPrDVVouxWbZp0MNHd-XDzkVqI6qEGZd_UvdELGdTgDm17qkZdy3QS5KSbZ5lXcCOXN_VnvWIsFdP3tI5F_268TxCQUd-AK51a895Qe87J0AWbr9X3MyliHGzTWa5vEHEsh6f-kUkCVr4skqdd6MM2tINx7x9SylfAnjzasUB80LFQg"/>
+<div class="absolute top-6 left-6 sticker-rotate bg-primary text-white px-6 py-2 rounded-full font-label-bold text-label-bold shadow-lg">
+                        Vasu's Choice
+                    </div>
+</div>
+<!-- Thumbnail Grid -->
+<div class="flex gap-4 mt-8">
+<div class="w-24 h-24 rounded-2xl overflow-hidden border-2 border-primary ring-4 ring-primary/10 cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="Close up of the interior of a luxury gift box, showing detailed packaging of gourmet treats and premium sparkling wine, elegant lighting, soft textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa-opTURxtU7DJlK7o38cprYBTviHda_mAXM2VrEv04nZN04M7b_pIG1aqv1a9zEySzuMgEQPR4p1irhhzO_HISEv8JiYXW64DWxO88gI4UwA5mh1jAlIsUf0UOywbJVnPuNVzi0qC2FktGNrJqwr6y8g_UDyGzFC4iHN1AyvkQ6rhWUNVgSLNwqVfNMsz-vIkeYfRxa7eSkg4taZ2vffqogrRkrk0cHOSOhgfd2XBkmAWI78ywjEgbw"/>
+</div>
+<div class="w-24 h-24 rounded-2xl overflow-hidden border-2 border-transparent hover:border-outline-variant cursor-pointer transition-all">
+<img class="w-full h-full object-cover" data-alt="A lifestyle shot of an elegant woman in a red silk dress unboxing the Grand Celebration Box in a sunlit modern living room, joyful expression, luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh7rRFLLyo9XHWfLVZ1H1cMD_EPiE1_6qRyGkYHsbeNIdiUbvPb4egpCnzPlWCsjUn8sYMmE3_THp-fMsaaOcxgxe1qghmMF_zp6Hg2sHybMbIDTDQFDfPZNKLC9VXlVKCXGu0j7zU6Qobs4aq_XXaVeDGIJR_LpfI5kLnlqShT4xZ8FAlPDmfLFg7c7kvSOVD1PsHiOIZiXPED5tjFY9s7Ir4DngaTz4JZnAlBzkWKG0my0L1FQNKAQ"/>
+</div>
+<div class="w-24 h-24 rounded-2xl overflow-hidden border-2 border-transparent hover:border-outline-variant cursor-pointer transition-all">
+<img class="w-full h-full object-cover" data-alt="Side view of a luxury gift box with premium gold embossing and a thick, high-quality crimson satin ribbon bow, minimalist clean studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtn_dBWMxmSRlRiXD3UkI506nnrWXwqzrNQp9ugPS87j-_YBbg0gZvZDU3v9yYTd_GDpe1mTkiyWRKLS5wKdsMw46orHWaITpnK9gfGymGmk7cTgLWqA9yT7Em0R45EfvBb5JEJH0OQVxqQlBbMsrOneqIk8W_4_QNMazhKKaOuYwWVH-t7VRpDdi4O4jXLJNvQAe0xogGhb5_eqLqHh6yCAAL52Glks6_Zmat-nINZlD74MNllG8XSA"/>
+</div>
+</div>
+</div>
+<!-- Product Info -->
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<span class="text-teal-accent font-label-bold text-label-bold tracking-widest uppercase">Premium Collection</span>
+<h1 class="font-headline-xl text-headline-xl text-ink-black leading-tight">The Grand Celebration Box</h1>
+<div class="flex items-center gap-4">
+<span class="text-headline-lg font-headline-lg text-primary">$125.00</span>
+<div class="flex items-center text-tertiary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="ml-2 text-on-surface-variant font-body-md">(453k Reviews)</span>
+</div>
+</div>
+</div>
+<div class="bg-white/50 backdrop-blur-sm p-6 rounded-3xl border border-outline-variant/30">
+<p class="font-body-lg text-on-surface-variant leading-relaxed">
+                        Elevate every milestone with our most prestigious curation yet. 'The Grand Celebration Box' is more than just a gift; it's a sensory experience designed for those who appreciate the finer things. Each item is hand-selected by our founder to ensure a perfect balance of luxury and sentiment.
+                    </p>
+</div>
+<!-- Customization -->
+<div class="space-y-6">
+<div>
+<h3 class="font-headline-md text-headline-md mb-4 text-ink-black">Customization Options</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="relative flex items-center p-4 cursor-pointer rounded-2xl border-2 border-outline-variant hover:border-primary transition-all bg-white group">
+<input checked="" class="hidden peer" name="wrap" type="radio"/>
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant peer-checked:border-primary peer-checked:bg-primary mr-3 flex items-center justify-center">
+<div class="w-2 h-2 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Standard Wrap</span>
+<span class="text-sm text-on-surface-variant">Included</span>
+</div>
+</label>
+<label class="relative flex items-center p-4 cursor-pointer rounded-2xl border-2 border-outline-variant hover:border-primary transition-all bg-white group">
+<input class="hidden peer" name="wrap" type="radio"/>
+<div class="w-5 h-5 rounded-full border-2 border-outline-variant peer-checked:border-primary peer-checked:bg-primary mr-3 flex items-center justify-center">
+<div class="w-2 h-2 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Luxury Gift Wrap</span>
+<span class="text-sm text-primary">+$10.00</span>
+</div>
+</label>
+</div>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface mb-2">Handwritten Note</label>
+<textarea class="w-full rounded-2xl border-outline-variant/30 focus:border-primary focus:ring-primary bg-white/70 backdrop-blur-sm p-4 text-body-md" placeholder="Write your heartfelt message here..." rows="3"></textarea>
+</div>
+<button class="w-full py-5 bg-primary hover:bg-on-primary-fixed-variant text-white rounded-full font-headline-md text-headline-md shadow-xl hover:shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-3">
+<span class="material-symbols-outlined">shopping_bag</span>
+                        Add to Cart
+                    </button>
+</div>
+</div>
+</section>
+<!-- Influencer Section -->
+<section class="bg-surface-container-low py-section-gap overflow-hidden">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+<div class="max-w-xl">
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-ink-black mb-4">How I Style It</h2>
+<p class="text-body-lg text-on-surface-variant">See how Vasu brings her personal touch to this collection. From unboxing rituals to styling tips, discover the magic behind the gift.</p>
+</div>
+<div class="flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-sm border border-outline-variant/20">
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-white" data-alt="Portrait avatar of a stylish young man smiling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDec_Q3ECmgJQTcv2h4VNBHH0FxV4sMB5GpRuxxeBV5xSiVulvuMaK6N8SPNMLARJ713nEmt4B1gBNPzwd-zE5gD9SWm8UxQGDOLdQfEaSBmEWJt42O75lHzsXGY2-0WiDkMWYwJ2h9QCGx0bi1TpCYIKn41lrRUgG2FsiwUmWvcK9zqF6iGp5FrzG6Rn4-n699fSbIAaIz8My92LXxsGkOKcMHtGlcBmQjkCywsLUn29rW0Hc9ffz7w"/>
+<img class="w-10 h-10 rounded-full border-2 border-white" data-alt="Portrait avatar of a fashionable young woman." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsFlq2adj5KADJDZcWHW7MJ9n8BfsimcMuGHkqXZSNTckdaEdrcwdyLpIpuoXRuW5Rc7DY5tiAEzZaTQIJ_1192BbMLzTo97xM3iEItam-QXoTtLYsqGmT0PcGfhKEouYVqhIQDYbc4MYI7IGD5XTgfmFFTUJzwzrovmDpffWtTj_cgT6-V6-npYOhoBT3HPs15m1ytlByVTwj-I3TCjgNYA1KBVluSsPAinuKp9kU_0_JRp_Ydo2p9g"/>
+<img class="w-10 h-10 rounded-full border-2 border-white" data-alt="Portrait avatar of a joyful creator." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfi8jGf6MMstIkwYxt09xCNXT_0F4NGEo0AZOg81aKWpCx5obKwXMoIWWbveOG0t3ABKyjtTMKuVyQOXCPiySnKbcxgbjKq1slmuqT31KVEkdJeorjefXfWt1oM04-wj_AAVxxEH6VEH7WFQeSWMQbmy-HCXHbrikK8R7xIlQOOKHYPf7NMqSVicT7jcaPQzVEr5RCQLks90UzSCwS5brZpH5cAyJ6r7XumfpiKM8SI4YrXrtz1_p20A"/>
+</div>
+<span class="font-label-bold text-label-bold">Join 50k+ Styles</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter h-[600px]">
+<div class="md:col-span-8 relative group rounded-[40px] overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="High-quality lifestyle photography of a influencer vlogger unboxing a luxury gift box in a high-end apartment, warm golden hour light, high-fashion aesthetic, cinematic focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVZvp5V8UN0fQO6O5n-_vSUjm9sI5pHO1Q8EpYgsSLfZJ0TO91IsLygy09nW6GJDBl9u8FSeN_t9Q-PeoiBry0VJjpa3wsyx636xAxNL5UJ1pTnlxboOxqP5_6kQadV5i94jNZD_6Sqy-JtR3cPhT-5rX81e2HsEmIzRyK1pIfv0iNKOnf85_d-t3eX6GDPyPZsegSTRMMID5x4td4W2XAsVRBbkd-ccA7R-l6rsZGr2zJhYOqYgukAA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<button class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="absolute bottom-10 left-10 text-white">
+<h4 class="font-headline-md text-headline-md">Unboxing the Celebration</h4>
+<p class="font-body-md opacity-90">By Vasu • 4:12 mins</p>
+</div>
+</div>
+<div class="hidden md:flex md:col-span-4 flex-col gap-gutter">
+<div class="flex-1 relative rounded-[40px] overflow-hidden group shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A vertical lifestyle shot of a chic workspace with the luxury gift box open, showcasing a champagne glass and expensive stationery, bright airy aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRjo1meWaTkuec0RMjienJNBP6R_WBQMyPqU9rm2x0uB6kOp8BAE6GYCzBvj6a6Pvemfce7l9Wjq-YRB_d_ncFMhJaNsx15JXzkLSrO1E2NMGoL_Ahi6u774B0uJr2ngeB3ov1pHJsGCUd0piWj-HTebghfUsjTGunKr4og9Uz360q8Hi_XNzg1zLBZ6WkfizEOuiHZxCDL9FOkcql5j3ghWO92l0khZKMx7e-9Jg7_BGak9wIw60Xjg"/>
+<div class="absolute top-4 right-4 bg-teal-accent text-white p-2 rounded-full shadow-md">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</div>
+</div>
+<div class="flex-1 relative rounded-[40px] overflow-hidden group shadow-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A curated flat lay of luxury gift items from the collection on a marble surface with gold accents, professional lighting, editorial fashion style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyVMlkrhC8t6rzCKh9F19hp79digX4QQy7xtm5DBsU56zhq4ygE8m07viMKAW-LX1LuVm5iZAAgmBjce5DM6ba4nBuxnX9vzu1FmtXqnn2ERsBGad0BDG8KCzEudxgug025BwnMWeBXHpr0VnE15U_i0yEElN8ul3AItau06xkJN_flf6C0HegqsNLPq2gOmdG-Zyh79TX_c2BTZhHcOXE3Pvez78eGLguM4Vb63Mtx8BlCIlr6c51Lg"/>
+<div class="absolute bottom-4 left-4 text-white p-4">
+<span class="font-label-bold text-label-bold">#HaveANiceGift</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recommendations -->
+<section class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="flex items-center justify-between mb-12">
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-ink-black">Complete the Set</h2>
+<a class="text-primary font-label-bold text-label-bold flex items-center gap-2 hover:gap-3 transition-all" href="#">
+                    View All <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Rec Card 1 -->
+<div class="vibrant-card bg-white p-4 rounded-[32px] shadow-sm border border-outline-variant/10">
+<div class="relative aspect-[4/5] rounded-3xl overflow-hidden mb-6">
+<img class="w-full h-full object-cover" data-alt="A minimalist white box containing a luxury silk sleeping mask and a premium lavender scented candle, high-end lifestyle photography, soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApdG7xSIJu6GZqoqIJD50cvhWefWIyKyf7_Mj4B-O9CNJVxmiV2qYSwRP-12NF37jYe1_RtG2r-xbzAmetaHELwuPm_5pNSHkoynHTWdtwrT8CX9scc_3ChNOsm50wPKOIzbyp2Loc0neG3MgB1VZ3OUNk77OrJA50OQtQEhgatZUlmPkUwH7vxpNETJupMNMQpSvUsnIUD9YxVeHLf8fJcOXUqw6mSv88n7r9154XKvMa-qBa6j2bdA"/>
+<div class="absolute top-4 right-4">
+<button class="w-10 h-10 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+<div class="px-2">
+<h3 class="font-headline-md text-headline-md text-ink-black mb-1">Evening Serenity Set</h3>
+<p class="text-on-surface-variant font-body-md mb-4">The perfect wind-down companion.</p>
+<div class="flex items-center justify-between">
+<span class="text-headline-md font-headline-md text-primary">$45.00</span>
+<button class="p-3 bg-secondary-container text-on-secondary-container rounded-2xl hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Rec Card 2 -->
+<div class="vibrant-card bg-white p-4 rounded-[32px] shadow-sm border border-outline-variant/10">
+<div class="relative aspect-[4/5] rounded-3xl overflow-hidden mb-6">
+<img class="w-full h-full object-cover" data-alt="A set of two hand-blown crystal champagne flutes with delicate gold rims, sitting on an elegant bar cart, luxury home decor aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuev-MdMB3Y5pF6lIJI8Fkx7tjuAoxGEw_QwjLK_NMCzqTGDAUfPINBQ74O8-wPFdLOCRhf6MjEzezOav2CvQmvo6iZgNZ5R6xkHBeQTpCS7GzEn2VnfVX4GU-mqBW-rLF9USm86vz5-2kPM1OvvfZwSKzDy44lrrtDwgVDxtdfxMzdxNRi022BnLQ7lSxGPrkFKvn3SljDM4wMEMZx547UiJKF6qxlbFHrM4KF3wkCcMdvT5gFATzwg"/>
+<span class="absolute top-4 left-4 bg-primary text-white text-xs px-3 py-1 rounded-full font-bold">BESTSELLER</span>
+</div>
+<div class="px-2">
+<h3 class="font-headline-md text-headline-md text-ink-black mb-1">Crystal Flute Pair</h3>
+<p class="text-on-surface-variant font-body-md mb-4">Hand-blown elegance for toasts.</p>
+<div class="flex items-center justify-between">
+<span class="text-headline-md font-headline-md text-primary">$65.00</span>
+<button class="p-3 bg-secondary-container text-on-secondary-container rounded-2xl hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Rec Card 3 -->
+<div class="vibrant-card bg-white p-4 rounded-[32px] shadow-sm border border-outline-variant/10">
+<div class="relative aspect-[4/5] rounded-3xl overflow-hidden mb-6">
+<img class="w-full h-full object-cover" data-alt="A premium black leather-bound journal with gold foil initials, lying on a wooden desk next to a luxury fountain pen, sophisticated stationery aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEGnzItUqAwo-_e6gChwzI2jfTkB3j0CycubFG1iL2ALhPWxutbidTx2YEtj5kHEgLrloL-e0gTfQ1_N8u_zak6PnG3Ll3U9jXLCmuKgegWF4S5Iwv5vc22Hby9IYP4mfFW9fRDOfvRwmMApyocl8MTHGs2f-zTrBp15rNXdeqMFh5tC0Sj295EAzk9xLRrrnz8sKamOUnbnUeq411Ky0Y0K7rjagEDIY1tI85aqfl7coS83dnqdoBTw"/>
+</div>
+<div class="px-2">
+<h3 class="font-headline-md text-headline-md text-ink-black mb-1">Signature Journal</h3>
+<p class="text-on-surface-variant font-body-md mb-4">Capture memories in style.</p>
+<div class="flex items-center justify-between">
+<span class="text-headline-md font-headline-md text-primary">$32.00</span>
+<button class="p-3 bg-secondary-container text-on-secondary-container rounded-2xl hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-3 gap-gutter bg-surface-container-low dark:bg-surface-container-highest border-t border-outline-variant rounded-t-[40px]">
+<div class="flex flex-col gap-6">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed italic font-extrabold">Have a Nice Gift</div>
+<p class="font-body-md text-on-surface-variant max-w-xs">Curating moments of joy through premium gifting experiences. Trusted by creators, loved by everyone.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<h4 class="font-label-bold text-label-bold text-on-surface">Shop</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Collections</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">New Arrivals</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Bestsellers</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-bold text-label-bold text-on-surface">Help</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Shipping</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Returns</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-body-md" href="#">Contact Us</a>
+</nav>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label-bold text-label-bold text-on-surface">Stay Inspired</h4>
+<div class="relative">
+<input class="w-full bg-white border-outline-variant/30 rounded-full px-6 py-4 focus:ring-primary focus:border-primary" placeholder="Your email address" type="email"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 bg-primary text-white p-3 rounded-full hover:bg-on-primary-fixed-variant transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<p class="text-xs text-on-surface-variant">© 2024 Have a Nice Gift. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('.vibrant-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const badge = card.querySelector('.material-symbols-outlined');
+                if(badge) badge.style.fontVariationSettings = "'FILL' 1";
+            });
+            card.addEventListener('mouseleave', () => {
+                const badge = card.querySelector('.material-symbols-outlined');
+                if(badge && !badge.closest('.bg-primary')) badge.style.fontVariationSettings = "'FILL' 0";
+            });
+        });
+
+        // Sticky Header effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body></html>
