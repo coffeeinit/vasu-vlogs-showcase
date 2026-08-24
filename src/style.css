@@ -15,7 +15,17 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Manrope', sans-serif; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'Manrope', sans-serif; cursor: auto; }
+
+.particle-canvas { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2; opacity: .8; }
+.custom-cursor-dot, .custom-cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 100; opacity: 0; }
+.custom-cursor-dot { width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px; border-radius: 50%; background: #ff684a; }
+.custom-cursor-ring { width: 62px; height: 62px; margin: -31px 0 0 -31px; border: 1px solid rgba(18,18,18,.45); border-radius: 50%; display: grid; place-items: center; transition: width .35s ease, height .35s ease, margin .35s ease, background-color .35s ease, border-color .35s ease; }
+.custom-cursor-ring span { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: .14em; text-transform: uppercase; opacity: 0; transition: opacity .25s ease; }
+.custom-cursor-ring.is-active { width: 78px; height: 78px; margin: -39px 0 0 -39px; background: rgba(215,255,63,.86); border-color: #121212; }
+.custom-cursor-ring.is-active span { opacity: 1; }
+@media (pointer: fine) and (prefers-reduced-motion: no-preference) { body { cursor: none; } .custom-cursor-dot, .custom-cursor-ring { opacity: 1; } }
+@media (pointer: coarse), (prefers-reduced-motion: reduce) { .particle-canvas, .custom-cursor-dot, .custom-cursor-ring { display: none; } }
 ::selection { background: var(--lime); color: var(--ink); }
 
 .font-display, .headline-huge { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.07em; }
