@@ -1,9 +1,0 @@
-<template>
-  <footer class="bg-[#121212] text-[#f3f0e8] border-t border-black">
-    <div class="max-w-[1440px] mx-auto px-5 md:px-10 py-14 md:py-20 grid md:grid-cols-[1fr_auto] gap-12 items-end">
-      <div><p class="font-display text-5xl md:text-7xl tracking-[-.09em]">See you<br /><span class="text-[#d7ff3f]">out there.</span></p><a href="mailto:hello@vasuvlogs.com" class="inline-block mt-8 font-mono text-xs uppercase tracking-[.16em] border-b border-[#d7ff3f] pb-1 hover:text-[#ff684a] transition-colors">hello@vasuvlogs.com</a></div>
-      <div class="md:text-right"><p class="font-mono text-[10px] uppercase tracking-[.18em] text-white/45 mb-4">Find Vasu online</p><div class="flex md:justify-end gap-5 text-xs uppercase tracking-[.14em] font-bold"><a href="https://www.instagram.com/vasuvlogs" target="_blank" rel="noopener noreferrer" class="hover:text-[#d7ff3f]">Instagram <svg viewBox="0 0 16 16" class="inline w-3 h-3 ml-1" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://www.youtube.com/@vasuvlogs" target="_blank" rel="noopener noreferrer" class="hover:text-[#d7ff3f]">YouTube <svg viewBox="0 0 16 16" class="inline w-3 h-3 ml-1" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 13 13 3M5 3h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
-    </div>
-    <div class="max-w-[1440px] mx-auto px-5 md:px-10 py-5 border-t border-white/15 flex flex-col sm:flex-row justify-between gap-3 font-mono text-[10px] uppercase tracking-[.15em] text-white/40"><span>© {{ new Date().getFullYear() }} Vasu Vlogs</span><div class="flex gap-5"><router-link to="/privacy" class="hover:text-white">Privacy</router-link><router-link to="/terms" class="hover:text-white">Terms</router-link></div></div>
-  </footer>
-</template>
